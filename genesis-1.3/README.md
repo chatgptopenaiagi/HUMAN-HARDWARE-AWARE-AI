@@ -13,7 +13,7 @@ python -m venv .awareness-preview
 .\.awareness-preview\Scripts\awareness-kernel.exe --version
 ```
 
-Or extract AwarenessKernel-0.1.3.dev1-windows-x64.zip and run .\AwarenessKernel.exe. The EXE includes its Python runtime. Both distributions have the same CLI. Substitute the installed command or EXE in the examples. Download from the private repository prerelease and compare SHA256SUMS.txt before use.
+Or extract AwarenessKernel-0.1.3.dev1-windows-x64.zip and run .\AwarenessKernel.exe. The EXE includes its Python runtime. Both distributions have the same CLI. Substitute the installed command or EXE in the examples. Download from the repository prerelease and compare SHA256SUMS.txt before use.
 
 ## Start with a hypothetical example
 The human supplies the objective and structured criteria. Free text is not automatically translated by an AI model. Built-in scenarios are explicitly hypothetical; they are not observations of your workstation.

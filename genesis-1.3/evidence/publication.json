@@ -1,0 +1,12 @@
+{
+  "release": "https://github.com/chatgptopenaiagi/HUMAN-HARDWARE-AWARE-AI/releases/tag/v0.1.3-dev.1",
+  "tag": "v0.1.3-dev.1",
+  "implementation_commit": "01e0e47f0958b9c405e021ea02eba6aede3b8e3d",
+  "prerelease": true,
+  "draft": false,
+  "published_artifacts_downloaded": 4,
+  "all_artifact_sha256_values_matched": true,
+  "repository_is_private_at_final_check": false,
+  "repository_visibility_changed_by_this_mission": false,
+  "release_tag_or_artifact_bytes_changed_by_documentation_followup": false
+}
