@@ -1,4 +1,10 @@
 # Changelog
+## GENESIS-1.2 — 2026-10-25
+- Added Python packaging metadata, versioned CLI, wheel and source distribution.
+- Added a Windows console build using one isolated PyInstaller environment.
+- Verified installed and frozen previews outside the checkout; distributed execution remains disabled.
+- Preserved the existing kernel algorithms and GENESIS-1.1 research evidence.
+
 ## GENESIS-1.1 — 2026-10-25
 - Added versioned reality, intent and transition records, a shared-dependency graph, validator and simulated gateway.
 - Added Windows restricted-token/job isolation, bounded recovery, behavioral tests and reproducible JSON evidence.

@@ -1,0 +1,12 @@
+include genesis-1.2/README.md
+include genesis-1.2/SECURITY.md
+include genesis-1.2/BUILD-REPORT.md
+recursive-include packaging *.py *.ps1
+recursive-include tests *.py
+include experiments/run_genesis_1_1.py
+include experiments/fixtures/genesis-1.1.json
+include genesis-1.1/EXPERIMENTAL-CONTRACT.md
+prune experiments/.runtime
+prune .preview-work
+prune build
+prune dist

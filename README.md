@@ -12,5 +12,8 @@ GENESIS-1 established a conceptual research foundation. [GENESIS-1.1](genesis-1.
 ## Reading path
 Start with [VISION](VISION.md), [ARCHITECTURE](ARCHITECTURE.md) and [RESEARCH-QUESTIONS](RESEARCH-QUESTIONS.md). The theory directory develops the principles; architecture describes proposed mechanisms; research defines hypotheses, related work and evaluation; scenarios explore different resource contexts. [ROADMAP](ROADMAP.md) separates this foundation from future work. [Experiments](experiments/README.md) contains the protocol for future evidence.
 
+## Installable developer preview
+[GENESIS-1.2](genesis-1.2/README.md) packages the existing kernel as an **EXPERIMENTAL DEVELOPER PREVIEW**: a Python wheel and a Windows console executable for snapshot inspection, capability graphs and transition evaluation. Proposed actions do not execute in these distributions. Read the [build report](genesis-1.2/BUILD-REPORT.md) and [distribution boundary](genesis-1.2/SECURITY.md).
+
 ## Completion contract
 GENESIS-1 requires all 30 requested Markdown documents, substantive content, consistent evidence labels, a checked local Git commit on main, and accurate publication reporting. GitHub publication is attempted with existing authentication and private visibility. No runtime implementation, installation or GENESIS-2 work is authorized by this milestone.

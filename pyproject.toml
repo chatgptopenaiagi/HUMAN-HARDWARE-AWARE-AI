@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "human-hardware-awareness-kernel"
+version = "0.1.2.dev1"
+description = "Experimental developer preview of an evidence-backed Awareness Kernel"
+readme = "genesis-1.2/README.md"
+requires-python = ">=3.10"
+authors = [{name = "HUMAN-HARDWARE-AWARE-AI contributors"}]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Environment :: Console",
+  "Programming Language :: Python :: 3",
+  "Operating System :: Microsoft :: Windows",
+]
+dependencies = []
+
+[project.scripts]
+awareness-kernel = "awareness_kernel.cli:main"
+
+[project.urls]
+Repository = "https://github.com/chatgptopenaiagi/HUMAN-HARDWARE-AWARE-AI"
+
+[tool.setuptools]
+packages = ["awareness_kernel"]

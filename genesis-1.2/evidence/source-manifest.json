@@ -1,0 +1,16 @@
+{
+  "pyproject.toml": "7ab77eafa2898bead6bccc38a9af89024ce056b133d22c1150d05fb8a426cbbc",
+  "MANIFEST.in": "5b97e040db3d4043351414d3f7a040942128cb1b8735db9207d216cdb172273e",
+  "awareness_kernel/__init__.py": "e1cfbae9dd1557426a8cb1ab082762ab5b768a4112e3d0ef2a358959973de5e7",
+  "awareness_kernel/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+  "awareness_kernel/cli.py": "f8d3dc11fa1d6d231b58822c3f30a1da2f0aac4d664a3bafe845c60c8e3c9788",
+  "awareness_kernel/kernel.py": "d0d4d6120c84c940db7e4e6820a822d67204f408c9782e684d4b201c4ae605d8",
+  "awareness_kernel/proposer.py": "5d0a92485e39e9f860779434714a01889405e2aa8da86c0e592f67c20a80d811",
+  "awareness_kernel/records.py": "49c64135719685b68bd8158c103c42e9cba700cc94a6f380ec2e67caa3ab1e7e",
+  "awareness_kernel/windows_isolation.py": "bc1aec2ce66ceba7bff00f0e7cd01df6fe2deac579d5873e45f1335a0b1a6bf9",
+  "packaging/assemble_release.py": "f68dc6aed1e322743584c6c2a25c468a3664657ee00106e74f3756dbb7d4759b",
+  "packaging/build.ps1": "ecaa7be751e6e8faffb8d32c4217cdfad1e12c37720b14fe3f24e84b37fbb22e",
+  "packaging/preview_entry.py": "f8551bd8d23779d21806deb62936d9ec63f9710fc620d9cdbc34c5dd604e75e4",
+  "packaging/verify_artifacts.py": "2729b2a62616699aab74c52ff7ea84666199b5ecc2141e6c60875fcd7a301923",
+  "tests/test_preview.py": "3e7337305f2bbd4de0431f26a36d3ae371d76474eec8bb2e0f971b730ac09a48"
+}

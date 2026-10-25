@@ -1,0 +1,4 @@
+0c48897edb2177c065165b075a10338c45738fae5844e88add0d5ae52ba4b825  human_hardware_awareness_kernel-0.1.2.dev1-py3-none-any.whl
+c705c388f67571049a7a4e5505e76b517556c3fa60c6e2cf2e507f814c7add6e  human_hardware_awareness_kernel-0.1.2.dev1.tar.gz
+6d8cdadf0a161a7777fa1c447faa2817329b2b8aba882086b3e7bb8ba27cf53c  AwarenessKernel.exe
+e6993f4c23090ae22fe8ab80500ad4c985ad32c0cb83b60c97c5b908dcea9502  AwarenessKernel-0.1.2.dev1-windows-x64.zip

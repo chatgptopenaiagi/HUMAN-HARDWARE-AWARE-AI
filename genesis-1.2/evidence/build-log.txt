@@ -1,0 +1,219 @@
+* Getting build dependencies for sdist...
+running egg_info
+creating human_hardware_awareness_kernel.egg-info
+writing human_hardware_awareness_kernel.egg-info\PKG-INFO
+writing dependency_links to human_hardware_awareness_kernel.egg-info\dependency_links.txt
+writing entry points to human_hardware_awareness_kernel.egg-info\entry_points.txt
+writing top-level names to human_hardware_awareness_kernel.egg-info\top_level.txt
+writing manifest file 'human_hardware_awareness_kernel.egg-info\SOURCES.txt'
+reading manifest file 'human_hardware_awareness_kernel.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'experiments\.runtime'
+no previously-included directories found matching '.preview-work'
+no previously-included directories found matching 'build'
+no previously-included directories found matching 'dist'
+writing manifest file 'human_hardware_awareness_kernel.egg-info\SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing human_hardware_awareness_kernel.egg-info\PKG-INFO
+writing dependency_links to human_hardware_awareness_kernel.egg-info\dependency_links.txt
+writing entry points to human_hardware_awareness_kernel.egg-info\entry_points.txt
+writing top-level names to human_hardware_awareness_kernel.egg-info\top_level.txt
+reading manifest file 'human_hardware_awareness_kernel.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'experiments\.runtime'
+no previously-included directories found matching '.preview-work'
+no previously-included directories found matching 'build'
+no previously-included directories found matching 'dist'
+writing manifest file 'human_hardware_awareness_kernel.egg-info\SOURCES.txt'
+running check
+creating human_hardware_awareness_kernel-0.1.2.dev1
+creating human_hardware_awareness_kernel-0.1.2.dev1\awareness_kernel
+creating human_hardware_awareness_kernel-0.1.2.dev1\experiments
+creating human_hardware_awareness_kernel-0.1.2.dev1\experiments\fixtures
+creating human_hardware_awareness_kernel-0.1.2.dev1\genesis-1.1
+creating human_hardware_awareness_kernel-0.1.2.dev1\genesis-1.2
+creating human_hardware_awareness_kernel-0.1.2.dev1\human_hardware_awareness_kernel.egg-info
+creating human_hardware_awareness_kernel-0.1.2.dev1\packaging
+creating human_hardware_awareness_kernel-0.1.2.dev1\tests
+copying files to human_hardware_awareness_kernel-0.1.2.dev1...
+copying MANIFEST.in -> human_hardware_awareness_kernel-0.1.2.dev1
+copying README.md -> human_hardware_awareness_kernel-0.1.2.dev1
+copying pyproject.toml -> human_hardware_awareness_kernel-0.1.2.dev1
+copying awareness_kernel\__init__.py -> human_hardware_awareness_kernel-0.1.2.dev1\awareness_kernel
+copying awareness_kernel\__main__.py -> human_hardware_awareness_kernel-0.1.2.dev1\awareness_kernel
+copying awareness_kernel\cli.py -> human_hardware_awareness_kernel-0.1.2.dev1\awareness_kernel
+copying awareness_kernel\kernel.py -> human_hardware_awareness_kernel-0.1.2.dev1\awareness_kernel
+copying awareness_kernel\proposer.py -> human_hardware_awareness_kernel-0.1.2.dev1\awareness_kernel
+copying awareness_kernel\records.py -> human_hardware_awareness_kernel-0.1.2.dev1\awareness_kernel
+copying awareness_kernel\windows_isolation.py -> human_hardware_awareness_kernel-0.1.2.dev1\awareness_kernel
+copying experiments\run_genesis_1_1.py -> human_hardware_awareness_kernel-0.1.2.dev1\experiments
+copying experiments\fixtures\genesis-1.1.json -> human_hardware_awareness_kernel-0.1.2.dev1\experiments\fixtures
+copying genesis-1.1\EXPERIMENTAL-CONTRACT.md -> human_hardware_awareness_kernel-0.1.2.dev1\genesis-1.1
+copying genesis-1.2\README.md -> human_hardware_awareness_kernel-0.1.2.dev1\genesis-1.2
+copying genesis-1.2\SECURITY.md -> human_hardware_awareness_kernel-0.1.2.dev1\genesis-1.2
+copying human_hardware_awareness_kernel.egg-info\PKG-INFO -> human_hardware_awareness_kernel-0.1.2.dev1\human_hardware_awareness_kernel.egg-info
+copying human_hardware_awareness_kernel.egg-info\SOURCES.txt -> human_hardware_awareness_kernel-0.1.2.dev1\human_hardware_awareness_kernel.egg-info
+copying human_hardware_awareness_kernel.egg-info\dependency_links.txt -> human_hardware_awareness_kernel-0.1.2.dev1\human_hardware_awareness_kernel.egg-info
+copying human_hardware_awareness_kernel.egg-info\entry_points.txt -> human_hardware_awareness_kernel-0.1.2.dev1\human_hardware_awareness_kernel.egg-info
+copying human_hardware_awareness_kernel.egg-info\top_level.txt -> human_hardware_awareness_kernel-0.1.2.dev1\human_hardware_awareness_kernel.egg-info
+copying packaging\build.ps1 -> human_hardware_awareness_kernel-0.1.2.dev1\packaging
+copying packaging\preview_entry.py -> human_hardware_awareness_kernel-0.1.2.dev1\packaging
+copying packaging\verify_artifacts.py -> human_hardware_awareness_kernel-0.1.2.dev1\packaging
+copying tests\__init__.py -> human_hardware_awareness_kernel-0.1.2.dev1\tests
+copying tests\test_experiments.py -> human_hardware_awareness_kernel-0.1.2.dev1\tests
+copying tests\test_kernel.py -> human_hardware_awareness_kernel-0.1.2.dev1\tests
+copying tests\test_preview.py -> human_hardware_awareness_kernel-0.1.2.dev1\tests
+Writing human_hardware_awareness_kernel-0.1.2.dev1\setup.cfg
+Creating tar archive
+removing 'human_hardware_awareness_kernel-0.1.2.dev1' (and everything under it)
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+running egg_info
+writing human_hardware_awareness_kernel.egg-info\PKG-INFO
+writing dependency_links to human_hardware_awareness_kernel.egg-info\dependency_links.txt
+writing entry points to human_hardware_awareness_kernel.egg-info\entry_points.txt
+writing top-level names to human_hardware_awareness_kernel.egg-info\top_level.txt
+reading manifest file 'human_hardware_awareness_kernel.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'experiments\.runtime'
+no previously-included directories found matching '.preview-work'
+no previously-included directories found matching 'build'
+no previously-included directories found matching 'dist'
+writing manifest file 'human_hardware_awareness_kernel.egg-info\SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build\lib\awareness_kernel
+copying awareness_kernel\cli.py -> build\lib\awareness_kernel
+copying awareness_kernel\kernel.py -> build\lib\awareness_kernel
+copying awareness_kernel\proposer.py -> build\lib\awareness_kernel
+copying awareness_kernel\records.py -> build\lib\awareness_kernel
+copying awareness_kernel\windows_isolation.py -> build\lib\awareness_kernel
+copying awareness_kernel\__init__.py -> build\lib\awareness_kernel
+copying awareness_kernel\__main__.py -> build\lib\awareness_kernel
+running egg_info
+writing human_hardware_awareness_kernel.egg-info\PKG-INFO
+writing dependency_links to human_hardware_awareness_kernel.egg-info\dependency_links.txt
+writing entry points to human_hardware_awareness_kernel.egg-info\entry_points.txt
+writing top-level names to human_hardware_awareness_kernel.egg-info\top_level.txt
+reading manifest file 'human_hardware_awareness_kernel.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'experiments\.runtime'
+no previously-included directories found matching '.preview-work'
+no previously-included directories found matching 'build'
+no previously-included directories found matching 'dist'
+writing manifest file 'human_hardware_awareness_kernel.egg-info\SOURCES.txt'
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64\wheel
+creating build\bdist.win-amd64\wheel\awareness_kernel
+copying build\lib\awareness_kernel\cli.py -> build\bdist.win-amd64\wheel\.\awareness_kernel
+copying build\lib\awareness_kernel\kernel.py -> build\bdist.win-amd64\wheel\.\awareness_kernel
+copying build\lib\awareness_kernel\proposer.py -> build\bdist.win-amd64\wheel\.\awareness_kernel
+copying build\lib\awareness_kernel\records.py -> build\bdist.win-amd64\wheel\.\awareness_kernel
+copying build\lib\awareness_kernel\windows_isolation.py -> build\bdist.win-amd64\wheel\.\awareness_kernel
+copying build\lib\awareness_kernel\__init__.py -> build\bdist.win-amd64\wheel\.\awareness_kernel
+copying build\lib\awareness_kernel\__main__.py -> build\bdist.win-amd64\wheel\.\awareness_kernel
+running install_egg_info
+Copying human_hardware_awareness_kernel.egg-info to build\bdist.win-amd64\wheel\.\human_hardware_awareness_kernel-0.1.2.dev1-py3.14.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\human_hardware_awareness_kernel-0.1.2.dev1.dist-info\WHEEL
+creating 'E:\\HUMAN-HARDWARE-AWARE-AI\\dist\\.tmp-sp1x4rxd\\human_hardware_awareness_kernel-0.1.2.dev1-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it
+adding 'awareness_kernel/__init__.py'
+adding 'awareness_kernel/__main__.py'
+adding 'awareness_kernel/cli.py'
+adding 'awareness_kernel/kernel.py'
+adding 'awareness_kernel/proposer.py'
+adding 'awareness_kernel/records.py'
+adding 'awareness_kernel/windows_isolation.py'
+adding 'human_hardware_awareness_kernel-0.1.2.dev1.dist-info/METADATA'
+adding 'human_hardware_awareness_kernel-0.1.2.dev1.dist-info/WHEEL'
+adding 'human_hardware_awareness_kernel-0.1.2.dev1.dist-info/entry_points.txt'
+adding 'human_hardware_awareness_kernel-0.1.2.dev1.dist-info/top_level.txt'
+adding 'human_hardware_awareness_kernel-0.1.2.dev1.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel
+Successfully built human_hardware_awareness_kernel-0.1.2.dev1.tar.gz and human_hardware_awareness_kernel-0.1.2.dev1-py3-none-any.whl
+Processing .\dist\human_hardware_awareness_kernel-0.1.2.dev1-py3-none-any.whl
+Installing collected packages: human-hardware-awareness-kernel
+Successfully installed human-hardware-awareness-kernel-0.1.2.dev1
+61 DEPRECATION: Running PyInstaller as admin is not necessary nor sensible. Run PyInstaller from a non-administrator terminal. PyInstaller 7.0 will block this.
+186 WARNING: Assuming this is not an Anaconda environment or an additional venv/pipenv/... environment manager is being used on top, because the conda-meta folder E:\HUMAN-HARDWARE-AWARE-AI\.preview-work\venv\conda-meta does not exist.
+215 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.9
+215 INFO: Python: 3.14.9 (conda)
+240 INFO: Platform: Windows-11-10.0.29695-SP0
+240 INFO: Python environment: E:\HUMAN-HARDWARE-AWARE-AI\.preview-work\venv
+241 INFO: wrote .preview-work\AwarenessKernel.spec
+244 INFO: Removing temporary files and cleaning cache in C:\Users\LOVE\AppData\Local\pyinstaller
+253 INFO: Module search paths (PYTHONPATH):
+['E:\\HUMAN-HARDWARE-AWARE-AI',
+ 'C:\\Users\\LOVE\\anaconda3\\python314.zip',
+ 'C:\\Users\\LOVE\\anaconda3\\DLLs',
+ 'C:\\Users\\LOVE\\anaconda3\\Lib',
+ 'C:\\Users\\LOVE\\anaconda3',
+ 'E:\\HUMAN-HARDWARE-AWARE-AI\\.preview-work\\venv',
+ 'E:\\HUMAN-HARDWARE-AWARE-AI\\.preview-work\\venv\\Lib\\site-packages',
+ 'E:\\HUMAN-HARDWARE-AWARE-AI\\packaging',
+ 'E:\\HUMAN-HARDWARE-AWARE-AI']
+152 WARNING: Assuming this is not an Anaconda environment or an additional venv/pipenv/... environment manager is being used on top, because the conda-meta folder E:\HUMAN-HARDWARE-AWARE-AI\.preview-work\venv\conda-meta does not exist.
+719 INFO: checking Analysis
+719 INFO: Building Analysis because Analysis-00.toc is non existent
+719 INFO: Looking for Python shared library...
+719 INFO: Using Python shared library: C:\Users\LOVE\anaconda3\python314.dll
+719 INFO: Running Analysis Analysis-00.toc
+719 INFO: Target bytecode optimization level: 0
+719 INFO: Initializing module dependency graph...
+721 INFO: Initializing module graph hook caches...
+755 INFO: Analyzing modules for base_library.zip ...
+151 WARNING: Assuming this is not an Anaconda environment or an additional venv/pipenv/... environment manager is being used on top, because the conda-meta folder E:\HUMAN-HARDWARE-AWARE-AI\.preview-work\venv\conda-meta does not exist.
+149 WARNING: Assuming this is not an Anaconda environment or an additional venv/pipenv/... environment manager is being used on top, because the conda-meta folder E:\HUMAN-HARDWARE-AWARE-AI\.preview-work\venv\conda-meta does not exist.
+148 WARNING: Assuming this is not an Anaconda environment or an additional venv/pipenv/... environment manager is being used on top, because the conda-meta folder E:\HUMAN-HARDWARE-AWARE-AI\.preview-work\venv\conda-meta does not exist.
+3642 INFO: Processing standard module hook 'hook-encodings.py' from 'E:\\HUMAN-HARDWARE-AWARE-AI\\.preview-work\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+158 WARNING: Assuming this is not an Anaconda environment or an additional venv/pipenv/... environment manager is being used on top, because the conda-meta folder E:\HUMAN-HARDWARE-AWARE-AI\.preview-work\venv\conda-meta does not exist.
+4651 INFO: Processing standard module hook 'hook-math.py' from 'E:\\HUMAN-HARDWARE-AWARE-AI\\.preview-work\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+6297 INFO: Processing standard module hook 'hook-difflib.py' from 'E:\\HUMAN-HARDWARE-AWARE-AI\\.preview-work\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+6326 INFO: Processing standard module hook 'hook-heapq.py' from 'E:\\HUMAN-HARDWARE-AWARE-AI\\.preview-work\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+7165 INFO: Processing standard module hook 'hook-pickle.py' from 'E:\\HUMAN-HARDWARE-AWARE-AI\\.preview-work\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+10482 INFO: Caching module dependency graph...
+10522 INFO: Analyzing E:\HUMAN-HARDWARE-AWARE-AI\packaging\preview_entry.py
+10570 INFO: Processing module hooks (post-graph stage)...
+10577 INFO: Performing binary vs. data reclassification (1 entries)
+10579 INFO: Looking for ctypes DLLs
+10583 INFO: Analyzing run-time hooks ...
+10584 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'E:\\HUMAN-HARDWARE-AWARE-AI\\.preview-work\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+10591 INFO: Creating base_library.zip...
+10616 INFO: Looking for dynamic libraries
+10820 INFO: Extra DLL search directories (AddDllDirectory): []
+10820 INFO: Extra DLL search directories (PATH): []
+11771 INFO: Warnings written to E:\HUMAN-HARDWARE-AWARE-AI\.preview-work\pyinstaller\AwarenessKernel\warn-AwarenessKernel.txt
+11798 INFO: Graph cross-reference written to E:\HUMAN-HARDWARE-AWARE-AI\.preview-work\pyinstaller\AwarenessKernel\xref-AwarenessKernel.html
+11821 INFO: checking PYZ
+11821 INFO: Building PYZ because PYZ-00.toc is non existent
+11822 INFO: Building PYZ (ZlibArchive) E:\HUMAN-HARDWARE-AWARE-AI\.preview-work\pyinstaller\AwarenessKernel\PYZ-00.pyz
+11995 INFO: Building PYZ (ZlibArchive) E:\HUMAN-HARDWARE-AWARE-AI\.preview-work\pyinstaller\AwarenessKernel\PYZ-00.pyz completed successfully.
+12007 INFO: checking PKG
+12007 INFO: Building PKG because PKG-00.toc is non existent
+12007 INFO: Building PKG (CArchive) AwarenessKernel.pkg
+14005 INFO: Building PKG (CArchive) AwarenessKernel.pkg completed successfully.
+14008 INFO: Bootloader E:\HUMAN-HARDWARE-AWARE-AI\.preview-work\venv\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\run.exe
+14008 INFO: checking EXE
+14008 INFO: Building EXE because EXE-00.toc is non existent
+14008 INFO: Building EXE from EXE-00.toc
+14008 INFO: Copying bootloader EXE to E:\HUMAN-HARDWARE-AWARE-AI\dist\AwarenessKernel.exe
+14088 INFO: Copying icon to EXE
+14132 INFO: Copying 0 resources to EXE
+14132 INFO: Embedding manifest in EXE
+14169 INFO: Appending PKG archive to EXE
+14208 INFO: Fixing EXE headers
+14463 INFO: Building EXE from EXE-00.toc completed successfully.
+14466 INFO: Build complete! The results are available in: E:\HUMAN-HARDWARE-AWARE-AI\dist
+Traceback (most recent call last):
+  File "E:\HUMAN-HARDWARE-AWARE-AI\packaging\verify_artifacts.py", line 88, in <module>
+    result = verify(args.python.resolve(), args.exe.resolve() if args.exe else None)
+  File "E:\HUMAN-HARDWARE-AWARE-AI\packaging\verify_artifacts.py", line 47, in verify
+    target_env['PATH'] = str(Path(env['SystemRoot']) / 'System32')
+                                  ~~~^^^^^^^^^^^^^^
+KeyError: 'SystemRoot'
