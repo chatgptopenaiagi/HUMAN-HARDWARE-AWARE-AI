@@ -1,0 +1,3160 @@
+{
+  "A": {
+    "capability_graph": {
+      "alternatives": {
+        "apk": [
+          "cap:apk"
+        ],
+        "archive": [
+          "cap:archive"
+        ],
+        "emulator_test": [
+          "cap:emulator_test"
+        ],
+        "native": [
+          "cap:native",
+          "cap:native-portable"
+        ],
+        "report": [
+          "cap:report"
+        ]
+      },
+      "id": "simulation-graph",
+      "nodes": {
+        "builder": {
+          "dependencies": [],
+          "fact": "pkg:builder",
+          "id": "builder",
+          "kind": "installed-software"
+        },
+        "cap:apk": {
+          "dependencies": [
+            "java",
+            "sdk",
+            "builder",
+            "storage"
+          ],
+          "fact": "op:apk",
+          "id": "cap:apk",
+          "kind": "operational-capability"
+        },
+        "cap:archive": {
+          "dependencies": [
+            "packager",
+            "storage"
+          ],
+          "fact": "op:archive",
+          "id": "cap:archive",
+          "kind": "operational-capability"
+        },
+        "cap:emulator_test": {
+          "dependencies": [
+            "emulator",
+            "storage"
+          ],
+          "fact": "op:emulator_test",
+          "id": "cap:emulator_test",
+          "kind": "operational-capability"
+        },
+        "cap:native": {
+          "dependencies": [
+            "compiler",
+            "storage"
+          ],
+          "fact": "op:native",
+          "id": "cap:native",
+          "kind": "operational-capability"
+        },
+        "cap:native-portable": {
+          "dependencies": [
+            "portable_compiler",
+            "storage"
+          ],
+          "fact": "op:native-portable",
+          "id": "cap:native-portable",
+          "kind": "operational-capability"
+        },
+        "cap:report": {
+          "dependencies": [
+            "cpu_runtime",
+            "storage"
+          ],
+          "fact": "op:report",
+          "id": "cap:report",
+          "kind": "operational-capability"
+        },
+        "compiler": {
+          "dependencies": [],
+          "fact": "pkg:compiler",
+          "id": "compiler",
+          "kind": "installed-software"
+        },
+        "cpu_runtime": {
+          "dependencies": [],
+          "fact": "pkg:cpu_runtime",
+          "id": "cpu_runtime",
+          "kind": "installed-software"
+        },
+        "cuda": {
+          "dependencies": [],
+          "fact": "pkg:cuda",
+          "id": "cuda",
+          "kind": "installed-software"
+        },
+        "emulator": {
+          "dependencies": [],
+          "fact": "pkg:emulator",
+          "id": "emulator",
+          "kind": "installed-software"
+        },
+        "java": {
+          "dependencies": [],
+          "fact": "pkg:java",
+          "id": "java",
+          "kind": "installed-software"
+        },
+        "packager": {
+          "dependencies": [],
+          "fact": "pkg:packager",
+          "id": "packager",
+          "kind": "installed-software"
+        },
+        "portable_compiler": {
+          "dependencies": [],
+          "fact": "pkg:portable_compiler",
+          "id": "portable_compiler",
+          "kind": "installed-software"
+        },
+        "sdk": {
+          "dependencies": [],
+          "fact": "pkg:sdk",
+          "id": "sdk",
+          "kind": "installed-software"
+        },
+        "storage": {
+          "dependencies": [],
+          "fact": "storage_available",
+          "id": "storage",
+          "kind": "physical-resource"
+        }
+      },
+      "schema_version": 1,
+      "version": 1
+    },
+    "initial_intent": {
+      "acceptance_criteria": [
+        "apk"
+      ],
+      "assumed_pending": [],
+      "constraints": {
+        "resource_boundary": "simulated units"
+      },
+      "exclusions": [],
+      "human_confirmed": [
+        "apk"
+      ],
+      "id": "A-intent",
+      "objective": "Produce apk",
+      "revision": 1,
+      "revision_history": [],
+      "schema_version": 1,
+      "timestamp": "2026-10-25T13:12:07.000418+00:00"
+    },
+    "initial_reality": {
+      "created_at": "2026-10-25T13:12:07.000443+00:00",
+      "derived_capabilities": {
+        "apk": "cap:apk"
+      },
+      "facts": {
+        "op:apk": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "A-probe-1",
+          "exit_status": 0,
+          "id": "op:apk",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.001306,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "pkg:builder": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "A-probe-2",
+          "exit_status": 0,
+          "id": "pkg:builder",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.0013485,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "pkg:java": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "A-probe-3",
+          "exit_status": 0,
+          "id": "pkg:java",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.0013697,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "pkg:sdk": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "A-probe-4",
+          "exit_status": 0,
+          "id": "pkg:sdk",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.0013838,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "privilege": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "A-probe-5",
+          "exit_status": 0,
+          "id": "privilege",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.001402,
+          "result": true,
+          "scope": "privilege",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "storage": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "A-probe-6",
+          "exit_status": 0,
+          "id": "storage",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.0014188,
+          "result": 50,
+          "scope": "storage",
+          "ttl_seconds": 60,
+          "value": 50
+        },
+        "storage_available": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "A-probe-7",
+          "exit_status": 0,
+          "id": "storage_available",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.0014336,
+          "result": true,
+          "scope": "storage_available",
+          "ttl_seconds": 60,
+          "value": true
+        }
+      },
+      "id": "A-reality",
+      "schema_version": 1,
+      "target": "disposable simulated A",
+      "version": 2
+    },
+    "intent": {
+      "acceptance_criteria": [
+        "apk"
+      ],
+      "assumed_pending": [],
+      "constraints": {
+        "resource_boundary": "simulated units"
+      },
+      "exclusions": [],
+      "human_confirmed": [
+        "apk"
+      ],
+      "id": "A-intent",
+      "objective": "Produce apk",
+      "revision": 1,
+      "revision_history": [],
+      "schema_version": 1,
+      "timestamp": "2026-10-25T13:12:07.000418+00:00"
+    },
+    "reality": {
+      "created_at": "2026-10-25T13:12:07.000443+00:00",
+      "derived_capabilities": {
+        "apk": "cap:apk"
+      },
+      "facts": {
+        "artifact:apk": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "A-probe-8",
+          "exit_status": 0,
+          "id": "artifact:apk",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.5351014,
+          "result": true,
+          "scope": "artifact:apk",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "op:apk": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "A-probe-9",
+          "exit_status": 0,
+          "id": "op:apk",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.5351484,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "pkg:builder": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "A-probe-10",
+          "exit_status": 0,
+          "id": "pkg:builder",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.5351672,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "pkg:java": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "A-probe-11",
+          "exit_status": 0,
+          "id": "pkg:java",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.535183,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "pkg:sdk": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "A-probe-12",
+          "exit_status": 0,
+          "id": "pkg:sdk",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.5351973,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "privilege": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "A-probe-13",
+          "exit_status": 0,
+          "id": "privilege",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.535211,
+          "result": true,
+          "scope": "privilege",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "storage": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "A-probe-14",
+          "exit_status": 0,
+          "id": "storage",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.5352247,
+          "result": 50,
+          "scope": "storage",
+          "ttl_seconds": 60,
+          "value": 50
+        },
+        "storage_available": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "A-probe-15",
+          "exit_status": 0,
+          "id": "storage_available",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.5352364,
+          "result": true,
+          "scope": "storage_available",
+          "ttl_seconds": 60,
+          "value": true
+        }
+      },
+      "id": "A-reality",
+      "schema_version": 1,
+      "target": "disposable simulated A",
+      "version": 4
+    }
+  },
+  "B": {
+    "capability_graph": {
+      "alternatives": {
+        "apk": [
+          "cap:apk"
+        ],
+        "archive": [
+          "cap:archive"
+        ],
+        "emulator_test": [
+          "cap:emulator_test"
+        ],
+        "native": [
+          "cap:native",
+          "cap:native-portable"
+        ],
+        "report": [
+          "cap:report"
+        ]
+      },
+      "id": "simulation-graph",
+      "nodes": {
+        "builder": {
+          "dependencies": [],
+          "fact": "pkg:builder",
+          "id": "builder",
+          "kind": "installed-software"
+        },
+        "cap:apk": {
+          "dependencies": [
+            "java",
+            "sdk",
+            "builder",
+            "storage"
+          ],
+          "fact": "op:apk",
+          "id": "cap:apk",
+          "kind": "operational-capability"
+        },
+        "cap:archive": {
+          "dependencies": [
+            "packager",
+            "storage"
+          ],
+          "fact": "op:archive",
+          "id": "cap:archive",
+          "kind": "operational-capability"
+        },
+        "cap:emulator_test": {
+          "dependencies": [
+            "emulator",
+            "storage"
+          ],
+          "fact": "op:emulator_test",
+          "id": "cap:emulator_test",
+          "kind": "operational-capability"
+        },
+        "cap:native": {
+          "dependencies": [
+            "compiler",
+            "storage"
+          ],
+          "fact": "op:native",
+          "id": "cap:native",
+          "kind": "operational-capability"
+        },
+        "cap:native-portable": {
+          "dependencies": [
+            "portable_compiler",
+            "storage"
+          ],
+          "fact": "op:native-portable",
+          "id": "cap:native-portable",
+          "kind": "operational-capability"
+        },
+        "cap:report": {
+          "dependencies": [
+            "cpu_runtime",
+            "storage"
+          ],
+          "fact": "op:report",
+          "id": "cap:report",
+          "kind": "operational-capability"
+        },
+        "compiler": {
+          "dependencies": [],
+          "fact": "pkg:compiler",
+          "id": "compiler",
+          "kind": "installed-software"
+        },
+        "cpu_runtime": {
+          "dependencies": [],
+          "fact": "pkg:cpu_runtime",
+          "id": "cpu_runtime",
+          "kind": "installed-software"
+        },
+        "cuda": {
+          "dependencies": [],
+          "fact": "pkg:cuda",
+          "id": "cuda",
+          "kind": "installed-software"
+        },
+        "emulator": {
+          "dependencies": [],
+          "fact": "pkg:emulator",
+          "id": "emulator",
+          "kind": "installed-software"
+        },
+        "java": {
+          "dependencies": [],
+          "fact": "pkg:java",
+          "id": "java",
+          "kind": "installed-software"
+        },
+        "packager": {
+          "dependencies": [],
+          "fact": "pkg:packager",
+          "id": "packager",
+          "kind": "installed-software"
+        },
+        "portable_compiler": {
+          "dependencies": [],
+          "fact": "pkg:portable_compiler",
+          "id": "portable_compiler",
+          "kind": "installed-software"
+        },
+        "sdk": {
+          "dependencies": [],
+          "fact": "pkg:sdk",
+          "id": "sdk",
+          "kind": "installed-software"
+        },
+        "storage": {
+          "dependencies": [],
+          "fact": "storage_available",
+          "id": "storage",
+          "kind": "physical-resource"
+        }
+      },
+      "schema_version": 1,
+      "version": 1
+    },
+    "initial_intent": {
+      "acceptance_criteria": [
+        "native"
+      ],
+      "assumed_pending": [],
+      "constraints": {
+        "resource_boundary": "simulated units"
+      },
+      "exclusions": [],
+      "human_confirmed": [
+        "native"
+      ],
+      "id": "B-intent",
+      "objective": "Produce native",
+      "revision": 1,
+      "revision_history": [],
+      "schema_version": 1,
+      "timestamp": "2026-10-25T13:12:07.581951+00:00"
+    },
+    "initial_reality": {
+      "created_at": "2026-10-25T13:12:07.581971+00:00",
+      "derived_capabilities": {
+        "native": null
+      },
+      "facts": {
+        "op:native": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "B-probe-1",
+          "exit_status": 0,
+          "id": "op:native",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.5827425,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "op:native-portable": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "B-probe-2",
+          "exit_status": 0,
+          "id": "op:native-portable",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.5827742,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:compiler": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "B-probe-3",
+          "exit_status": 0,
+          "id": "pkg:compiler",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.5827885,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:portable_compiler": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "B-probe-4",
+          "exit_status": 0,
+          "id": "pkg:portable_compiler",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.5828006,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "privilege": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "B-probe-5",
+          "exit_status": 0,
+          "id": "privilege",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.582813,
+          "result": true,
+          "scope": "privilege",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "storage": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "B-probe-6",
+          "exit_status": 0,
+          "id": "storage",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.582825,
+          "result": 50,
+          "scope": "storage",
+          "ttl_seconds": 60,
+          "value": 50
+        },
+        "storage_available": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "B-probe-7",
+          "exit_status": 0,
+          "id": "storage_available",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933927.5828383,
+          "result": true,
+          "scope": "storage_available",
+          "ttl_seconds": 60,
+          "value": true
+        }
+      },
+      "id": "B-reality",
+      "schema_version": 1,
+      "target": "disposable simulated B",
+      "version": 2
+    },
+    "intent": {
+      "acceptance_criteria": [
+        "native"
+      ],
+      "assumed_pending": [],
+      "constraints": {
+        "resource_boundary": "simulated units"
+      },
+      "exclusions": [],
+      "human_confirmed": [
+        "native"
+      ],
+      "id": "B-intent",
+      "objective": "Produce native",
+      "revision": 1,
+      "revision_history": [],
+      "schema_version": 1,
+      "timestamp": "2026-10-25T13:12:07.581951+00:00"
+    },
+    "reality": {
+      "created_at": "2026-10-25T13:12:07.581971+00:00",
+      "derived_capabilities": {
+        "native": "cap:native"
+      },
+      "facts": {
+        "artifact:native": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "B-probe-16",
+          "exit_status": 0,
+          "id": "artifact:native",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.141962,
+          "result": true,
+          "scope": "artifact:native",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "op:native": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "B-probe-17",
+          "exit_status": 0,
+          "id": "op:native",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.1419795,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "op:native-portable": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "B-probe-18",
+          "exit_status": 0,
+          "id": "op:native-portable",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.1419897,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:compiler": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "B-probe-19",
+          "exit_status": 0,
+          "id": "pkg:compiler",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.1420074,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "pkg:portable_compiler": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "B-probe-20",
+          "exit_status": 0,
+          "id": "pkg:portable_compiler",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.1420157,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "privilege": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "B-probe-21",
+          "exit_status": 0,
+          "id": "privilege",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.1420228,
+          "result": true,
+          "scope": "privilege",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "storage": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "B-probe-22",
+          "exit_status": 0,
+          "id": "storage",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.1420298,
+          "result": 47,
+          "scope": "storage",
+          "ttl_seconds": 60,
+          "value": 47
+        },
+        "storage_available": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "B-probe-23",
+          "exit_status": 0,
+          "id": "storage_available",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.1420367,
+          "result": true,
+          "scope": "storage_available",
+          "ttl_seconds": 60,
+          "value": true
+        }
+      },
+      "id": "B-reality",
+      "schema_version": 1,
+      "target": "disposable simulated B",
+      "version": 6
+    }
+  },
+  "C": {
+    "capability_graph": {
+      "alternatives": {
+        "apk": [
+          "cap:apk"
+        ],
+        "archive": [
+          "cap:archive"
+        ],
+        "emulator_test": [
+          "cap:emulator_test"
+        ],
+        "native": [
+          "cap:native",
+          "cap:native-portable"
+        ],
+        "report": [
+          "cap:report"
+        ]
+      },
+      "id": "simulation-graph",
+      "nodes": {
+        "builder": {
+          "dependencies": [],
+          "fact": "pkg:builder",
+          "id": "builder",
+          "kind": "installed-software"
+        },
+        "cap:apk": {
+          "dependencies": [
+            "java",
+            "sdk",
+            "builder",
+            "storage"
+          ],
+          "fact": "op:apk",
+          "id": "cap:apk",
+          "kind": "operational-capability"
+        },
+        "cap:archive": {
+          "dependencies": [
+            "packager",
+            "storage"
+          ],
+          "fact": "op:archive",
+          "id": "cap:archive",
+          "kind": "operational-capability"
+        },
+        "cap:emulator_test": {
+          "dependencies": [
+            "emulator",
+            "storage"
+          ],
+          "fact": "op:emulator_test",
+          "id": "cap:emulator_test",
+          "kind": "operational-capability"
+        },
+        "cap:native": {
+          "dependencies": [
+            "compiler",
+            "storage"
+          ],
+          "fact": "op:native",
+          "id": "cap:native",
+          "kind": "operational-capability"
+        },
+        "cap:native-portable": {
+          "dependencies": [
+            "portable_compiler",
+            "storage"
+          ],
+          "fact": "op:native-portable",
+          "id": "cap:native-portable",
+          "kind": "operational-capability"
+        },
+        "cap:report": {
+          "dependencies": [
+            "cpu_runtime",
+            "storage"
+          ],
+          "fact": "op:report",
+          "id": "cap:report",
+          "kind": "operational-capability"
+        },
+        "compiler": {
+          "dependencies": [],
+          "fact": "pkg:compiler",
+          "id": "compiler",
+          "kind": "installed-software"
+        },
+        "cpu_runtime": {
+          "dependencies": [],
+          "fact": "pkg:cpu_runtime",
+          "id": "cpu_runtime",
+          "kind": "installed-software"
+        },
+        "cuda": {
+          "dependencies": [],
+          "fact": "pkg:cuda",
+          "id": "cuda",
+          "kind": "installed-software"
+        },
+        "emulator": {
+          "dependencies": [],
+          "fact": "pkg:emulator",
+          "id": "emulator",
+          "kind": "installed-software"
+        },
+        "java": {
+          "dependencies": [],
+          "fact": "pkg:java",
+          "id": "java",
+          "kind": "installed-software"
+        },
+        "packager": {
+          "dependencies": [],
+          "fact": "pkg:packager",
+          "id": "packager",
+          "kind": "installed-software"
+        },
+        "portable_compiler": {
+          "dependencies": [],
+          "fact": "pkg:portable_compiler",
+          "id": "portable_compiler",
+          "kind": "installed-software"
+        },
+        "sdk": {
+          "dependencies": [],
+          "fact": "pkg:sdk",
+          "id": "sdk",
+          "kind": "installed-software"
+        },
+        "storage": {
+          "dependencies": [],
+          "fact": "storage_available",
+          "id": "storage",
+          "kind": "physical-resource"
+        }
+      },
+      "schema_version": 1,
+      "version": 1
+    },
+    "initial_intent": {
+      "acceptance_criteria": [
+        "report"
+      ],
+      "assumed_pending": [],
+      "constraints": {
+        "resource_boundary": "simulated units"
+      },
+      "exclusions": [],
+      "human_confirmed": [
+        "report"
+      ],
+      "id": "C-intent",
+      "objective": "Produce report",
+      "revision": 1,
+      "revision_history": [],
+      "schema_version": 1,
+      "timestamp": "2026-10-25T13:12:08.178749+00:00"
+    },
+    "initial_reality": {
+      "created_at": "2026-10-25T13:12:08.178762+00:00",
+      "derived_capabilities": {
+        "report": "cap:report"
+      },
+      "facts": {
+        "op:report": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "C-probe-1",
+          "exit_status": 0,
+          "id": "op:report",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.1794572,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "pkg:cpu_runtime": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "C-probe-2",
+          "exit_status": 0,
+          "id": "pkg:cpu_runtime",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.1794775,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "privilege": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "C-probe-3",
+          "exit_status": 0,
+          "id": "privilege",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.1794875,
+          "result": true,
+          "scope": "privilege",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "storage": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "C-probe-4",
+          "exit_status": 0,
+          "id": "storage",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.179495,
+          "result": 50,
+          "scope": "storage",
+          "ttl_seconds": 60,
+          "value": 50
+        },
+        "storage_available": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "C-probe-5",
+          "exit_status": 0,
+          "id": "storage_available",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.1795025,
+          "result": true,
+          "scope": "storage_available",
+          "ttl_seconds": 60,
+          "value": true
+        }
+      },
+      "id": "C-reality",
+      "schema_version": 1,
+      "target": "disposable simulated C",
+      "version": 2
+    },
+    "intent": {
+      "acceptance_criteria": [
+        "report"
+      ],
+      "assumed_pending": [],
+      "constraints": {
+        "resource_boundary": "simulated units"
+      },
+      "exclusions": [],
+      "human_confirmed": [
+        "report"
+      ],
+      "id": "C-intent",
+      "objective": "Produce report",
+      "revision": 1,
+      "revision_history": [],
+      "schema_version": 1,
+      "timestamp": "2026-10-25T13:12:08.178749+00:00"
+    },
+    "reality": {
+      "created_at": "2026-10-25T13:12:08.178762+00:00",
+      "derived_capabilities": {
+        "report": "cap:report"
+      },
+      "facts": {
+        "artifact:report": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "C-probe-6",
+          "exit_status": 0,
+          "id": "artifact:report",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.6036787,
+          "result": true,
+          "scope": "artifact:report",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "op:report": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "C-probe-7",
+          "exit_status": 0,
+          "id": "op:report",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.6037,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "pkg:cpu_runtime": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "C-probe-8",
+          "exit_status": 0,
+          "id": "pkg:cpu_runtime",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.6037102,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "privilege": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "C-probe-9",
+          "exit_status": 0,
+          "id": "privilege",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.6037183,
+          "result": true,
+          "scope": "privilege",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "storage": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "C-probe-10",
+          "exit_status": 0,
+          "id": "storage",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.6037264,
+          "result": 50,
+          "scope": "storage",
+          "ttl_seconds": 60,
+          "value": 50
+        },
+        "storage_available": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "C-probe-11",
+          "exit_status": 0,
+          "id": "storage_available",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.6037338,
+          "result": true,
+          "scope": "storage_available",
+          "ttl_seconds": 60,
+          "value": true
+        }
+      },
+      "id": "C-reality",
+      "schema_version": 1,
+      "target": "disposable simulated C",
+      "version": 4
+    }
+  },
+  "D": {
+    "capability_graph": {
+      "alternatives": {
+        "apk": [
+          "cap:apk"
+        ],
+        "archive": [
+          "cap:archive"
+        ],
+        "emulator_test": [
+          "cap:emulator_test"
+        ],
+        "native": [
+          "cap:native",
+          "cap:native-portable"
+        ],
+        "report": [
+          "cap:report"
+        ]
+      },
+      "id": "simulation-graph",
+      "nodes": {
+        "builder": {
+          "dependencies": [],
+          "fact": "pkg:builder",
+          "id": "builder",
+          "kind": "installed-software"
+        },
+        "cap:apk": {
+          "dependencies": [
+            "java",
+            "sdk",
+            "builder",
+            "storage"
+          ],
+          "fact": "op:apk",
+          "id": "cap:apk",
+          "kind": "operational-capability"
+        },
+        "cap:archive": {
+          "dependencies": [
+            "packager",
+            "storage"
+          ],
+          "fact": "op:archive",
+          "id": "cap:archive",
+          "kind": "operational-capability"
+        },
+        "cap:emulator_test": {
+          "dependencies": [
+            "emulator",
+            "storage"
+          ],
+          "fact": "op:emulator_test",
+          "id": "cap:emulator_test",
+          "kind": "operational-capability"
+        },
+        "cap:native": {
+          "dependencies": [
+            "compiler",
+            "storage"
+          ],
+          "fact": "op:native",
+          "id": "cap:native",
+          "kind": "operational-capability"
+        },
+        "cap:native-portable": {
+          "dependencies": [
+            "portable_compiler",
+            "storage"
+          ],
+          "fact": "op:native-portable",
+          "id": "cap:native-portable",
+          "kind": "operational-capability"
+        },
+        "cap:report": {
+          "dependencies": [
+            "cpu_runtime",
+            "storage"
+          ],
+          "fact": "op:report",
+          "id": "cap:report",
+          "kind": "operational-capability"
+        },
+        "compiler": {
+          "dependencies": [],
+          "fact": "pkg:compiler",
+          "id": "compiler",
+          "kind": "installed-software"
+        },
+        "cpu_runtime": {
+          "dependencies": [],
+          "fact": "pkg:cpu_runtime",
+          "id": "cpu_runtime",
+          "kind": "installed-software"
+        },
+        "cuda": {
+          "dependencies": [],
+          "fact": "pkg:cuda",
+          "id": "cuda",
+          "kind": "installed-software"
+        },
+        "emulator": {
+          "dependencies": [],
+          "fact": "pkg:emulator",
+          "id": "emulator",
+          "kind": "installed-software"
+        },
+        "java": {
+          "dependencies": [],
+          "fact": "pkg:java",
+          "id": "java",
+          "kind": "installed-software"
+        },
+        "packager": {
+          "dependencies": [],
+          "fact": "pkg:packager",
+          "id": "packager",
+          "kind": "installed-software"
+        },
+        "portable_compiler": {
+          "dependencies": [],
+          "fact": "pkg:portable_compiler",
+          "id": "portable_compiler",
+          "kind": "installed-software"
+        },
+        "sdk": {
+          "dependencies": [],
+          "fact": "pkg:sdk",
+          "id": "sdk",
+          "kind": "installed-software"
+        },
+        "storage": {
+          "dependencies": [],
+          "fact": "storage_available",
+          "id": "storage",
+          "kind": "physical-resource"
+        }
+      },
+      "schema_version": 1,
+      "version": 1
+    },
+    "initial_intent": {
+      "acceptance_criteria": [
+        "archive"
+      ],
+      "assumed_pending": [],
+      "constraints": {
+        "resource_boundary": "simulated units"
+      },
+      "exclusions": [],
+      "human_confirmed": [
+        "archive"
+      ],
+      "id": "D-intent",
+      "objective": "Produce archive",
+      "revision": 1,
+      "revision_history": [],
+      "schema_version": 1,
+      "timestamp": "2026-10-25T13:12:08.640971+00:00"
+    },
+    "initial_reality": {
+      "created_at": "2026-10-25T13:12:08.640985+00:00",
+      "derived_capabilities": {
+        "archive": null
+      },
+      "facts": {
+        "op:archive": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "D-probe-1",
+          "exit_status": 0,
+          "id": "op:archive",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.641515,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:packager": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "D-probe-2",
+          "exit_status": 0,
+          "id": "pkg:packager",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.6415386,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "privilege": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "D-probe-3",
+          "exit_status": 0,
+          "id": "privilege",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.641548,
+          "result": true,
+          "scope": "privilege",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "storage": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "D-probe-4",
+          "exit_status": 0,
+          "id": "storage",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.6415558,
+          "result": 50,
+          "scope": "storage",
+          "ttl_seconds": 60,
+          "value": 50
+        },
+        "storage_available": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "D-probe-5",
+          "exit_status": 0,
+          "id": "storage_available",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933928.6415627,
+          "result": true,
+          "scope": "storage_available",
+          "ttl_seconds": 60,
+          "value": true
+        }
+      },
+      "id": "D-reality",
+      "schema_version": 1,
+      "target": "disposable simulated D",
+      "version": 2
+    },
+    "intent": {
+      "acceptance_criteria": [
+        "archive"
+      ],
+      "assumed_pending": [],
+      "constraints": {
+        "resource_boundary": "simulated units"
+      },
+      "exclusions": [],
+      "human_confirmed": [
+        "archive"
+      ],
+      "id": "D-intent",
+      "objective": "Produce archive",
+      "revision": 1,
+      "revision_history": [],
+      "schema_version": 1,
+      "timestamp": "2026-10-25T13:12:08.640971+00:00"
+    },
+    "reality": {
+      "created_at": "2026-10-25T13:12:08.640985+00:00",
+      "derived_capabilities": {
+        "archive": "cap:archive"
+      },
+      "facts": {
+        "artifact:archive": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "D-probe-12",
+          "exit_status": 0,
+          "id": "artifact:archive",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.0498564,
+          "result": true,
+          "scope": "artifact:archive",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "op:archive": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "D-probe-13",
+          "exit_status": 0,
+          "id": "op:archive",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.0498772,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "pkg:packager": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "D-probe-14",
+          "exit_status": 0,
+          "id": "pkg:packager",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.0498862,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "privilege": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "D-probe-15",
+          "exit_status": 0,
+          "id": "privilege",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.0498939,
+          "result": true,
+          "scope": "privilege",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "storage": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "D-probe-16",
+          "exit_status": 0,
+          "id": "storage",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.0499012,
+          "result": 48,
+          "scope": "storage",
+          "ttl_seconds": 60,
+          "value": 48
+        },
+        "storage_available": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "D-probe-17",
+          "exit_status": 0,
+          "id": "storage_available",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.0499082,
+          "result": true,
+          "scope": "storage_available",
+          "ttl_seconds": 60,
+          "value": true
+        }
+      },
+      "id": "D-reality",
+      "schema_version": 1,
+      "target": "disposable simulated D",
+      "version": 6
+    }
+  },
+  "F": {
+    "capability_graph": {
+      "alternatives": {
+        "apk": [
+          "cap:apk"
+        ],
+        "archive": [
+          "cap:archive"
+        ],
+        "emulator_test": [
+          "cap:emulator_test"
+        ],
+        "native": [
+          "cap:native",
+          "cap:native-portable"
+        ],
+        "report": [
+          "cap:report"
+        ]
+      },
+      "id": "simulation-graph",
+      "nodes": {
+        "builder": {
+          "dependencies": [],
+          "fact": "pkg:builder",
+          "id": "builder",
+          "kind": "installed-software"
+        },
+        "cap:apk": {
+          "dependencies": [
+            "java",
+            "sdk",
+            "builder",
+            "storage"
+          ],
+          "fact": "op:apk",
+          "id": "cap:apk",
+          "kind": "operational-capability"
+        },
+        "cap:archive": {
+          "dependencies": [
+            "packager",
+            "storage"
+          ],
+          "fact": "op:archive",
+          "id": "cap:archive",
+          "kind": "operational-capability"
+        },
+        "cap:emulator_test": {
+          "dependencies": [
+            "emulator",
+            "storage"
+          ],
+          "fact": "op:emulator_test",
+          "id": "cap:emulator_test",
+          "kind": "operational-capability"
+        },
+        "cap:native": {
+          "dependencies": [
+            "compiler",
+            "storage"
+          ],
+          "fact": "op:native",
+          "id": "cap:native",
+          "kind": "operational-capability"
+        },
+        "cap:native-portable": {
+          "dependencies": [
+            "portable_compiler",
+            "storage"
+          ],
+          "fact": "op:native-portable",
+          "id": "cap:native-portable",
+          "kind": "operational-capability"
+        },
+        "cap:report": {
+          "dependencies": [
+            "cpu_runtime",
+            "storage"
+          ],
+          "fact": "op:report",
+          "id": "cap:report",
+          "kind": "operational-capability"
+        },
+        "compiler": {
+          "dependencies": [],
+          "fact": "pkg:compiler",
+          "id": "compiler",
+          "kind": "installed-software"
+        },
+        "cpu_runtime": {
+          "dependencies": [],
+          "fact": "pkg:cpu_runtime",
+          "id": "cpu_runtime",
+          "kind": "installed-software"
+        },
+        "cuda": {
+          "dependencies": [],
+          "fact": "pkg:cuda",
+          "id": "cuda",
+          "kind": "installed-software"
+        },
+        "emulator": {
+          "dependencies": [],
+          "fact": "pkg:emulator",
+          "id": "emulator",
+          "kind": "installed-software"
+        },
+        "java": {
+          "dependencies": [],
+          "fact": "pkg:java",
+          "id": "java",
+          "kind": "installed-software"
+        },
+        "packager": {
+          "dependencies": [],
+          "fact": "pkg:packager",
+          "id": "packager",
+          "kind": "installed-software"
+        },
+        "portable_compiler": {
+          "dependencies": [],
+          "fact": "pkg:portable_compiler",
+          "id": "portable_compiler",
+          "kind": "installed-software"
+        },
+        "sdk": {
+          "dependencies": [],
+          "fact": "pkg:sdk",
+          "id": "sdk",
+          "kind": "installed-software"
+        },
+        "storage": {
+          "dependencies": [],
+          "fact": "storage_available",
+          "id": "storage",
+          "kind": "physical-resource"
+        }
+      },
+      "schema_version": 1,
+      "version": 1
+    },
+    "initial_intent": {
+      "acceptance_criteria": [
+        "apk",
+        "emulator_test"
+      ],
+      "assumed_pending": [],
+      "constraints": {
+        "resource_boundary": "simulated units"
+      },
+      "exclusions": [],
+      "human_confirmed": [
+        "apk",
+        "emulator_test"
+      ],
+      "id": "F-intent",
+      "objective": "Produce apk, emulator_test",
+      "revision": 1,
+      "revision_history": [],
+      "schema_version": 1,
+      "timestamp": "2026-10-25T13:12:09.086329+00:00"
+    },
+    "initial_reality": {
+      "created_at": "2026-10-25T13:12:09.086342+00:00",
+      "derived_capabilities": {
+        "apk": "cap:apk",
+        "emulator_test": null
+      },
+      "facts": {
+        "op:apk": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-1",
+          "exit_status": 0,
+          "id": "op:apk",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.0868285,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "op:emulator_test": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-2",
+          "exit_status": 0,
+          "id": "op:emulator_test",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.086852,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:builder": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-3",
+          "exit_status": 0,
+          "id": "pkg:builder",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.0868616,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "pkg:emulator": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-4",
+          "exit_status": 0,
+          "id": "pkg:emulator",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.086869,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:java": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-5",
+          "exit_status": 0,
+          "id": "pkg:java",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.0868757,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "pkg:sdk": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-6",
+          "exit_status": 0,
+          "id": "pkg:sdk",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.086887,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "privilege": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-7",
+          "exit_status": 0,
+          "id": "privilege",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.086894,
+          "result": true,
+          "scope": "privilege",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "storage": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-8",
+          "exit_status": 0,
+          "id": "storage",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.0869012,
+          "result": 50,
+          "scope": "storage",
+          "ttl_seconds": 60,
+          "value": 50
+        },
+        "storage_available": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-9",
+          "exit_status": 0,
+          "id": "storage_available",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.0869079,
+          "result": true,
+          "scope": "storage_available",
+          "ttl_seconds": 60,
+          "value": true
+        }
+      },
+      "id": "F-reality",
+      "schema_version": 1,
+      "target": "disposable simulated F",
+      "version": 2
+    },
+    "intent": {
+      "acceptance_criteria": [
+        "apk"
+      ],
+      "assumed_pending": [],
+      "constraints": {
+        "resource_boundary": "simulated units"
+      },
+      "exclusions": [],
+      "human_confirmed": [
+        "apk"
+      ],
+      "id": "F-intent",
+      "objective": "Produce APK; omit emulator testing",
+      "revision": 2,
+      "revision_history": [
+        {
+          "acceptance_criteria": [
+            "apk",
+            "emulator_test"
+          ],
+          "assumed_pending": [],
+          "constraints": {
+            "resource_boundary": "simulated units"
+          },
+          "exclusions": [],
+          "human_confirmed": [
+            "apk",
+            "emulator_test"
+          ],
+          "id": "F-intent",
+          "objective": "Produce apk, emulator_test",
+          "revision": 1,
+          "revision_history": [],
+          "schema_version": 1,
+          "timestamp": "2026-10-25T13:12:09.086329+00:00"
+        }
+      ],
+      "schema_version": 1,
+      "timestamp": "2026-10-25T13:12:09.487796+00:00"
+    },
+    "reality": {
+      "created_at": "2026-10-25T13:12:09.086342+00:00",
+      "derived_capabilities": {
+        "apk": "cap:apk"
+      },
+      "facts": {
+        "artifact:apk": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-10",
+          "exit_status": 0,
+          "id": "artifact:apk",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.4893436,
+          "result": true,
+          "scope": "artifact:apk",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "op:apk": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-11",
+          "exit_status": 0,
+          "id": "op:apk",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.48937,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "op:emulator_test": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-2",
+          "exit_status": 0,
+          "id": "op:emulator_test",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.086852,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:builder": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-12",
+          "exit_status": 0,
+          "id": "pkg:builder",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.4893813,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "pkg:emulator": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-4",
+          "exit_status": 0,
+          "id": "pkg:emulator",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.086869,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:java": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-13",
+          "exit_status": 0,
+          "id": "pkg:java",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.48939,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "pkg:sdk": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-14",
+          "exit_status": 0,
+          "id": "pkg:sdk",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.489397,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "privilege": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-15",
+          "exit_status": 0,
+          "id": "privilege",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.4894068,
+          "result": true,
+          "scope": "privilege",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "storage": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-16",
+          "exit_status": 0,
+          "id": "storage",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.4894142,
+          "result": 50,
+          "scope": "storage",
+          "ttl_seconds": 60,
+          "value": 50
+        },
+        "storage_available": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "F-probe-17",
+          "exit_status": 0,
+          "id": "storage_available",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.4894214,
+          "result": true,
+          "scope": "storage_available",
+          "ttl_seconds": 60,
+          "value": true
+        }
+      },
+      "id": "F-reality",
+      "schema_version": 1,
+      "target": "disposable simulated F",
+      "version": 4
+    }
+  },
+  "G-partial": {
+    "capability_graph": {
+      "alternatives": {
+        "apk": [
+          "cap:apk"
+        ],
+        "archive": [
+          "cap:archive"
+        ],
+        "emulator_test": [
+          "cap:emulator_test"
+        ],
+        "native": [
+          "cap:native",
+          "cap:native-portable"
+        ],
+        "report": [
+          "cap:report"
+        ]
+      },
+      "id": "simulation-graph",
+      "nodes": {
+        "builder": {
+          "dependencies": [],
+          "fact": "pkg:builder",
+          "id": "builder",
+          "kind": "installed-software"
+        },
+        "cap:apk": {
+          "dependencies": [
+            "java",
+            "sdk",
+            "builder",
+            "storage"
+          ],
+          "fact": "op:apk",
+          "id": "cap:apk",
+          "kind": "operational-capability"
+        },
+        "cap:archive": {
+          "dependencies": [
+            "packager",
+            "storage"
+          ],
+          "fact": "op:archive",
+          "id": "cap:archive",
+          "kind": "operational-capability"
+        },
+        "cap:emulator_test": {
+          "dependencies": [
+            "emulator",
+            "storage"
+          ],
+          "fact": "op:emulator_test",
+          "id": "cap:emulator_test",
+          "kind": "operational-capability"
+        },
+        "cap:native": {
+          "dependencies": [
+            "compiler",
+            "storage"
+          ],
+          "fact": "op:native",
+          "id": "cap:native",
+          "kind": "operational-capability"
+        },
+        "cap:native-portable": {
+          "dependencies": [
+            "portable_compiler",
+            "storage"
+          ],
+          "fact": "op:native-portable",
+          "id": "cap:native-portable",
+          "kind": "operational-capability"
+        },
+        "cap:report": {
+          "dependencies": [
+            "cpu_runtime",
+            "storage"
+          ],
+          "fact": "op:report",
+          "id": "cap:report",
+          "kind": "operational-capability"
+        },
+        "compiler": {
+          "dependencies": [],
+          "fact": "pkg:compiler",
+          "id": "compiler",
+          "kind": "installed-software"
+        },
+        "cpu_runtime": {
+          "dependencies": [],
+          "fact": "pkg:cpu_runtime",
+          "id": "cpu_runtime",
+          "kind": "installed-software"
+        },
+        "cuda": {
+          "dependencies": [],
+          "fact": "pkg:cuda",
+          "id": "cuda",
+          "kind": "installed-software"
+        },
+        "emulator": {
+          "dependencies": [],
+          "fact": "pkg:emulator",
+          "id": "emulator",
+          "kind": "installed-software"
+        },
+        "java": {
+          "dependencies": [],
+          "fact": "pkg:java",
+          "id": "java",
+          "kind": "installed-software"
+        },
+        "packager": {
+          "dependencies": [],
+          "fact": "pkg:packager",
+          "id": "packager",
+          "kind": "installed-software"
+        },
+        "portable_compiler": {
+          "dependencies": [],
+          "fact": "pkg:portable_compiler",
+          "id": "portable_compiler",
+          "kind": "installed-software"
+        },
+        "sdk": {
+          "dependencies": [],
+          "fact": "pkg:sdk",
+          "id": "sdk",
+          "kind": "installed-software"
+        },
+        "storage": {
+          "dependencies": [],
+          "fact": "storage_available",
+          "id": "storage",
+          "kind": "physical-resource"
+        }
+      },
+      "schema_version": 1,
+      "version": 1
+    },
+    "initial_intent": {
+      "acceptance_criteria": [
+        "native"
+      ],
+      "assumed_pending": [],
+      "constraints": {
+        "resource_boundary": "simulated units"
+      },
+      "exclusions": [],
+      "human_confirmed": [
+        "native"
+      ],
+      "id": "G-partial-intent",
+      "objective": "Produce native",
+      "revision": 1,
+      "revision_history": [],
+      "schema_version": 1,
+      "timestamp": "2026-10-25T13:12:09.529328+00:00"
+    },
+    "initial_reality": {
+      "created_at": "2026-10-25T13:12:09.529342+00:00",
+      "derived_capabilities": {
+        "native": null
+      },
+      "facts": {
+        "op:native": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-partial-probe-1",
+          "exit_status": 0,
+          "id": "op:native",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.5298188,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "op:native-portable": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-partial-probe-2",
+          "exit_status": 0,
+          "id": "op:native-portable",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.529843,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:compiler": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-partial-probe-3",
+          "exit_status": 0,
+          "id": "pkg:compiler",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.5298529,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:portable_compiler": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-partial-probe-4",
+          "exit_status": 0,
+          "id": "pkg:portable_compiler",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.5298638,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "privilege": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-partial-probe-5",
+          "exit_status": 0,
+          "id": "privilege",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.529871,
+          "result": true,
+          "scope": "privilege",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "storage": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-partial-probe-6",
+          "exit_status": 0,
+          "id": "storage",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.5298786,
+          "result": 50,
+          "scope": "storage",
+          "ttl_seconds": 60,
+          "value": 50
+        },
+        "storage_available": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-partial-probe-7",
+          "exit_status": 0,
+          "id": "storage_available",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.5298858,
+          "result": true,
+          "scope": "storage_available",
+          "ttl_seconds": 60,
+          "value": true
+        }
+      },
+      "id": "G-partial-reality",
+      "schema_version": 1,
+      "target": "disposable simulated G-partial",
+      "version": 2
+    },
+    "intent": {
+      "acceptance_criteria": [
+        "native"
+      ],
+      "assumed_pending": [],
+      "constraints": {
+        "resource_boundary": "simulated units"
+      },
+      "exclusions": [],
+      "human_confirmed": [
+        "native"
+      ],
+      "id": "G-partial-intent",
+      "objective": "Produce native",
+      "revision": 1,
+      "revision_history": [],
+      "schema_version": 1,
+      "timestamp": "2026-10-25T13:12:09.529328+00:00"
+    },
+    "reality": {
+      "created_at": "2026-10-25T13:12:09.529342+00:00",
+      "derived_capabilities": {
+        "native": "cap:native"
+      },
+      "facts": {
+        "artifact:native": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-partial-probe-24",
+          "exit_status": 0,
+          "id": "artifact:native",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9360085,
+          "result": true,
+          "scope": "artifact:native",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "op:native": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-partial-probe-25",
+          "exit_status": 0,
+          "id": "op:native",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9360263,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "op:native-portable": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-partial-probe-26",
+          "exit_status": 0,
+          "id": "op:native-portable",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.936037,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:compiler": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-partial-probe-27",
+          "exit_status": 0,
+          "id": "pkg:compiler",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9360456,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "pkg:portable_compiler": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-partial-probe-28",
+          "exit_status": 0,
+          "id": "pkg:portable_compiler",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9360528,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "privilege": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-partial-probe-29",
+          "exit_status": 0,
+          "id": "privilege",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9360597,
+          "result": true,
+          "scope": "privilege",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "storage": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-partial-probe-30",
+          "exit_status": 0,
+          "id": "storage",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9360669,
+          "result": 47,
+          "scope": "storage",
+          "ttl_seconds": 60,
+          "value": 47
+        },
+        "storage_available": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-partial-probe-31",
+          "exit_status": 0,
+          "id": "storage_available",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9360735,
+          "result": true,
+          "scope": "storage_available",
+          "ttl_seconds": 60,
+          "value": true
+        }
+      },
+      "id": "G-partial-reality",
+      "schema_version": 1,
+      "target": "disposable simulated G-partial",
+      "version": 9
+    }
+  },
+  "G-probe-failure": {
+    "capability_graph": {
+      "alternatives": {
+        "apk": [
+          "cap:apk"
+        ],
+        "archive": [
+          "cap:archive"
+        ],
+        "emulator_test": [
+          "cap:emulator_test"
+        ],
+        "native": [
+          "cap:native",
+          "cap:native-portable"
+        ],
+        "report": [
+          "cap:report"
+        ]
+      },
+      "id": "simulation-graph",
+      "nodes": {
+        "builder": {
+          "dependencies": [],
+          "fact": "pkg:builder",
+          "id": "builder",
+          "kind": "installed-software"
+        },
+        "cap:apk": {
+          "dependencies": [
+            "java",
+            "sdk",
+            "builder",
+            "storage"
+          ],
+          "fact": "op:apk",
+          "id": "cap:apk",
+          "kind": "operational-capability"
+        },
+        "cap:archive": {
+          "dependencies": [
+            "packager",
+            "storage"
+          ],
+          "fact": "op:archive",
+          "id": "cap:archive",
+          "kind": "operational-capability"
+        },
+        "cap:emulator_test": {
+          "dependencies": [
+            "emulator",
+            "storage"
+          ],
+          "fact": "op:emulator_test",
+          "id": "cap:emulator_test",
+          "kind": "operational-capability"
+        },
+        "cap:native": {
+          "dependencies": [
+            "compiler",
+            "storage"
+          ],
+          "fact": "op:native",
+          "id": "cap:native",
+          "kind": "operational-capability"
+        },
+        "cap:native-portable": {
+          "dependencies": [
+            "portable_compiler",
+            "storage"
+          ],
+          "fact": "op:native-portable",
+          "id": "cap:native-portable",
+          "kind": "operational-capability"
+        },
+        "cap:report": {
+          "dependencies": [
+            "cpu_runtime",
+            "storage"
+          ],
+          "fact": "op:report",
+          "id": "cap:report",
+          "kind": "operational-capability"
+        },
+        "compiler": {
+          "dependencies": [],
+          "fact": "pkg:compiler",
+          "id": "compiler",
+          "kind": "installed-software"
+        },
+        "cpu_runtime": {
+          "dependencies": [],
+          "fact": "pkg:cpu_runtime",
+          "id": "cpu_runtime",
+          "kind": "installed-software"
+        },
+        "cuda": {
+          "dependencies": [],
+          "fact": "pkg:cuda",
+          "id": "cuda",
+          "kind": "installed-software"
+        },
+        "emulator": {
+          "dependencies": [],
+          "fact": "pkg:emulator",
+          "id": "emulator",
+          "kind": "installed-software"
+        },
+        "java": {
+          "dependencies": [],
+          "fact": "pkg:java",
+          "id": "java",
+          "kind": "installed-software"
+        },
+        "packager": {
+          "dependencies": [],
+          "fact": "pkg:packager",
+          "id": "packager",
+          "kind": "installed-software"
+        },
+        "portable_compiler": {
+          "dependencies": [],
+          "fact": "pkg:portable_compiler",
+          "id": "portable_compiler",
+          "kind": "installed-software"
+        },
+        "sdk": {
+          "dependencies": [],
+          "fact": "pkg:sdk",
+          "id": "sdk",
+          "kind": "installed-software"
+        },
+        "storage": {
+          "dependencies": [],
+          "fact": "storage_available",
+          "id": "storage",
+          "kind": "physical-resource"
+        }
+      },
+      "schema_version": 1,
+      "version": 1
+    },
+    "initial_intent": {
+      "acceptance_criteria": [
+        "native"
+      ],
+      "assumed_pending": [],
+      "constraints": {
+        "resource_boundary": "simulated units"
+      },
+      "exclusions": [],
+      "human_confirmed": [
+        "native"
+      ],
+      "id": "G-probe-failure-intent",
+      "objective": "Produce native",
+      "revision": 1,
+      "revision_history": [],
+      "schema_version": 1,
+      "timestamp": "2026-10-25T13:12:10.419190+00:00"
+    },
+    "initial_reality": {
+      "created_at": "2026-10-25T13:12:10.419203+00:00",
+      "derived_capabilities": {
+        "native": null
+      },
+      "facts": {
+        "op:native": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-probe-failure-probe-1",
+          "exit_status": 0,
+          "id": "op:native",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933930.419681,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "op:native-portable": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-probe-failure-probe-2",
+          "exit_status": 0,
+          "id": "op:native-portable",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933930.4197047,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:compiler": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-probe-failure-probe-3",
+          "exit_status": 0,
+          "id": "pkg:compiler",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933930.4197142,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:portable_compiler": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-probe-failure-probe-4",
+          "exit_status": 0,
+          "id": "pkg:portable_compiler",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933930.4197218,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "privilege": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-probe-failure-probe-5",
+          "exit_status": 0,
+          "id": "privilege",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933930.4197288,
+          "result": true,
+          "scope": "privilege",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "storage": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-probe-failure-probe-6",
+          "exit_status": 0,
+          "id": "storage",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933930.4197361,
+          "result": 50,
+          "scope": "storage",
+          "ttl_seconds": 60,
+          "value": 50
+        },
+        "storage_available": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-probe-failure-probe-7",
+          "exit_status": 0,
+          "id": "storage_available",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933930.419743,
+          "result": true,
+          "scope": "storage_available",
+          "ttl_seconds": 60,
+          "value": true
+        }
+      },
+      "id": "G-probe-failure-reality",
+      "schema_version": 1,
+      "target": "disposable simulated G-probe-failure",
+      "version": 2
+    },
+    "intent": {
+      "acceptance_criteria": [
+        "native"
+      ],
+      "assumed_pending": [],
+      "constraints": {
+        "resource_boundary": "simulated units"
+      },
+      "exclusions": [],
+      "human_confirmed": [
+        "native"
+      ],
+      "id": "G-probe-failure-intent",
+      "objective": "Produce native",
+      "revision": 1,
+      "revision_history": [],
+      "schema_version": 1,
+      "timestamp": "2026-10-25T13:12:10.419190+00:00"
+    },
+    "reality": {
+      "created_at": "2026-10-25T13:12:10.419203+00:00",
+      "derived_capabilities": {
+        "native": "cap:native"
+      },
+      "facts": {
+        "artifact:native": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-probe-failure-probe-32",
+          "exit_status": 0,
+          "id": "artifact:native",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933930.8233843,
+          "result": true,
+          "scope": "artifact:native",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "op:native": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-probe-failure-probe-33",
+          "exit_status": 0,
+          "id": "op:native",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933930.823404,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "op:native-portable": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-probe-failure-probe-34",
+          "exit_status": 0,
+          "id": "op:native-portable",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933930.8234148,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:compiler": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-probe-failure-probe-35",
+          "exit_status": 0,
+          "id": "pkg:compiler",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933930.8234227,
+          "result": true,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "pkg:portable_compiler": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-probe-failure-probe-36",
+          "exit_status": 0,
+          "id": "pkg:portable_compiler",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933930.8234296,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "privilege": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-probe-failure-probe-37",
+          "exit_status": 0,
+          "id": "privilege",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933930.8234365,
+          "result": true,
+          "scope": "privilege",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "storage": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-probe-failure-probe-38",
+          "exit_status": 0,
+          "id": "storage",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933930.8234437,
+          "result": 47,
+          "scope": "storage",
+          "ttl_seconds": 60,
+          "value": 47
+        },
+        "storage_available": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-probe-failure-probe-39",
+          "exit_status": 0,
+          "id": "storage_available",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933930.823456,
+          "result": true,
+          "scope": "storage_available",
+          "ttl_seconds": 60,
+          "value": true
+        }
+      },
+      "id": "G-probe-failure-reality",
+      "schema_version": 1,
+      "target": "disposable simulated G-probe-failure",
+      "version": 10
+    }
+  },
+  "G-recovery-failure": {
+    "capability_graph": {
+      "alternatives": {
+        "apk": [
+          "cap:apk"
+        ],
+        "archive": [
+          "cap:archive"
+        ],
+        "emulator_test": [
+          "cap:emulator_test"
+        ],
+        "native": [
+          "cap:native",
+          "cap:native-portable"
+        ],
+        "report": [
+          "cap:report"
+        ]
+      },
+      "id": "simulation-graph",
+      "nodes": {
+        "builder": {
+          "dependencies": [],
+          "fact": "pkg:builder",
+          "id": "builder",
+          "kind": "installed-software"
+        },
+        "cap:apk": {
+          "dependencies": [
+            "java",
+            "sdk",
+            "builder",
+            "storage"
+          ],
+          "fact": "op:apk",
+          "id": "cap:apk",
+          "kind": "operational-capability"
+        },
+        "cap:archive": {
+          "dependencies": [
+            "packager",
+            "storage"
+          ],
+          "fact": "op:archive",
+          "id": "cap:archive",
+          "kind": "operational-capability"
+        },
+        "cap:emulator_test": {
+          "dependencies": [
+            "emulator",
+            "storage"
+          ],
+          "fact": "op:emulator_test",
+          "id": "cap:emulator_test",
+          "kind": "operational-capability"
+        },
+        "cap:native": {
+          "dependencies": [
+            "compiler",
+            "storage"
+          ],
+          "fact": "op:native",
+          "id": "cap:native",
+          "kind": "operational-capability"
+        },
+        "cap:native-portable": {
+          "dependencies": [
+            "portable_compiler",
+            "storage"
+          ],
+          "fact": "op:native-portable",
+          "id": "cap:native-portable",
+          "kind": "operational-capability"
+        },
+        "cap:report": {
+          "dependencies": [
+            "cpu_runtime",
+            "storage"
+          ],
+          "fact": "op:report",
+          "id": "cap:report",
+          "kind": "operational-capability"
+        },
+        "compiler": {
+          "dependencies": [],
+          "fact": "pkg:compiler",
+          "id": "compiler",
+          "kind": "installed-software"
+        },
+        "cpu_runtime": {
+          "dependencies": [],
+          "fact": "pkg:cpu_runtime",
+          "id": "cpu_runtime",
+          "kind": "installed-software"
+        },
+        "cuda": {
+          "dependencies": [],
+          "fact": "pkg:cuda",
+          "id": "cuda",
+          "kind": "installed-software"
+        },
+        "emulator": {
+          "dependencies": [],
+          "fact": "pkg:emulator",
+          "id": "emulator",
+          "kind": "installed-software"
+        },
+        "java": {
+          "dependencies": [],
+          "fact": "pkg:java",
+          "id": "java",
+          "kind": "installed-software"
+        },
+        "packager": {
+          "dependencies": [],
+          "fact": "pkg:packager",
+          "id": "packager",
+          "kind": "installed-software"
+        },
+        "portable_compiler": {
+          "dependencies": [],
+          "fact": "pkg:portable_compiler",
+          "id": "portable_compiler",
+          "kind": "installed-software"
+        },
+        "sdk": {
+          "dependencies": [],
+          "fact": "pkg:sdk",
+          "id": "sdk",
+          "kind": "installed-software"
+        },
+        "storage": {
+          "dependencies": [],
+          "fact": "storage_available",
+          "id": "storage",
+          "kind": "physical-resource"
+        }
+      },
+      "schema_version": 1,
+      "version": 1
+    },
+    "initial_intent": {
+      "acceptance_criteria": [
+        "native"
+      ],
+      "assumed_pending": [],
+      "constraints": {
+        "resource_boundary": "simulated units"
+      },
+      "exclusions": [],
+      "human_confirmed": [
+        "native"
+      ],
+      "id": "G-recovery-failure-intent",
+      "objective": "Produce native",
+      "revision": 1,
+      "revision_history": [],
+      "schema_version": 1,
+      "timestamp": "2026-10-25T13:12:09.974480+00:00"
+    },
+    "initial_reality": {
+      "created_at": "2026-10-25T13:12:09.974492+00:00",
+      "derived_capabilities": {
+        "native": null
+      },
+      "facts": {
+        "op:native": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-recovery-failure-probe-1",
+          "exit_status": 0,
+          "id": "op:native",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9749818,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "op:native-portable": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-recovery-failure-probe-2",
+          "exit_status": 0,
+          "id": "op:native-portable",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9750059,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:compiler": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-recovery-failure-probe-3",
+          "exit_status": 0,
+          "id": "pkg:compiler",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9750159,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:portable_compiler": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-recovery-failure-probe-4",
+          "exit_status": 0,
+          "id": "pkg:portable_compiler",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9750235,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "privilege": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-recovery-failure-probe-5",
+          "exit_status": 0,
+          "id": "privilege",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.975031,
+          "result": true,
+          "scope": "privilege",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "storage": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-recovery-failure-probe-6",
+          "exit_status": 0,
+          "id": "storage",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9750383,
+          "result": 50,
+          "scope": "storage",
+          "ttl_seconds": 60,
+          "value": 50
+        },
+        "storage_available": {
+          "classification": "VERIFIED",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-recovery-failure-probe-7",
+          "exit_status": 0,
+          "id": "storage_available",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9750454,
+          "result": true,
+          "scope": "storage_available",
+          "ttl_seconds": 60,
+          "value": true
+        }
+      },
+      "id": "G-recovery-failure-reality",
+      "schema_version": 1,
+      "target": "disposable simulated G-recovery-failure",
+      "version": 2
+    },
+    "intent": {
+      "acceptance_criteria": [
+        "native"
+      ],
+      "assumed_pending": [],
+      "constraints": {
+        "resource_boundary": "simulated units"
+      },
+      "exclusions": [],
+      "human_confirmed": [
+        "native"
+      ],
+      "id": "G-recovery-failure-intent",
+      "objective": "Produce native",
+      "revision": 1,
+      "revision_history": [],
+      "schema_version": 1,
+      "timestamp": "2026-10-25T13:12:09.974480+00:00"
+    },
+    "reality": {
+      "created_at": "2026-10-25T13:12:09.974492+00:00",
+      "derived_capabilities": {},
+      "facts": {
+        "op:native": {
+          "classification": "STALE",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-recovery-failure-probe-1",
+          "exit_status": 0,
+          "id": "op:native",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9749818,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "op:native-portable": {
+          "classification": "STALE",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-recovery-failure-probe-2",
+          "exit_status": 0,
+          "id": "op:native-portable",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9750059,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:compiler": {
+          "classification": "STALE",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-recovery-failure-probe-3",
+          "exit_status": 0,
+          "id": "pkg:compiler",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9750159,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "pkg:portable_compiler": {
+          "classification": "STALE",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-recovery-failure-probe-4",
+          "exit_status": 0,
+          "id": "pkg:portable_compiler",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9750235,
+          "result": false,
+          "scope": "software",
+          "ttl_seconds": 60,
+          "value": false
+        },
+        "privilege": {
+          "classification": "STALE",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-recovery-failure-probe-5",
+          "exit_status": 0,
+          "id": "privilege",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.975031,
+          "result": true,
+          "scope": "privilege",
+          "ttl_seconds": 60,
+          "value": true
+        },
+        "storage": {
+          "classification": "STALE",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-recovery-failure-probe-6",
+          "exit_status": 0,
+          "id": "storage",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9750383,
+          "result": 50,
+          "scope": "storage",
+          "ttl_seconds": 60,
+          "value": 50
+        },
+        "storage_available": {
+          "classification": "STALE",
+          "context": "trusted local broker; simulated environment only",
+          "evidence_id": "G-recovery-failure-probe-7",
+          "exit_status": 0,
+          "id": "storage_available",
+          "method": "simulated-state-adapter",
+          "observed_at": 1792933929.9750454,
+          "result": true,
+          "scope": "storage_available",
+          "ttl_seconds": 60,
+          "value": true
+        }
+      },
+      "id": "G-recovery-failure-reality",
+      "schema_version": 1,
+      "target": "disposable simulated G-recovery-failure",
+      "version": 5
+    }
+  }
+}

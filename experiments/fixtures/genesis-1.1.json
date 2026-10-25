@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "source": "deterministic proposals; expected decisions fixed before run",
+  "scenarios": [
+    {"id":"A","packages":["java","sdk","builder"],"criteria":["apk"],"steps":[
+      {"operation":"install","requirement":"apk","component":"sdk","expected":"REJECTED_UNNECESSARY","necessity":"unnecessary"},
+      {"operation":"reuse","requirement":"apk","expected":"AUTHORIZED","necessity":"necessary"}]},
+    {"id":"B","packages":[],"criteria":["native"],"steps":[
+      {"operation":"build","requirement":"native","expected":"REJECTED_INFEASIBLE","necessity":"necessary"},
+      {"operation":"install","requirement":"native","component":"compiler","expected":"AUTHORIZED","necessity":"necessary"},
+      {"operation":"build","requirement":"native","expected":"AUTHORIZED","necessity":"necessary"}]},
+    {"id":"C","packages":["cpu_runtime"],"criteria":["report"],"steps":[
+      {"operation":"install","requirement":"report","component":"cuda","expected":"REJECTED_UNNECESSARY","necessity":"unnecessary"},
+      {"operation":"reuse","requirement":"report","expected":"AUTHORIZED","necessity":"necessary"}]},
+    {"id":"D","packages":[],"criteria":["archive"],"steps":[
+      {"operation":"install","requirement":"archive","component":"packager","expected":"AUTHORIZED","necessity":"necessary"},
+      {"operation":"build","requirement":"archive","expected":"AUTHORIZED","necessity":"necessary"}]},
+    {"id":"F","packages":["java","sdk","builder"],"criteria":["apk","emulator_test"],"revise":["apk"],"steps":[
+      {"operation":"build","requirement":"emulator_test","old_intent":true,"expected":"REJECTED_STALE","necessity":"obsolete"},
+      {"operation":"build","requirement":"emulator_test","expected":"REJECTED_UNNECESSARY","necessity":"unnecessary"},
+      {"operation":"reuse","requirement":"apk","expected":"AUTHORIZED","necessity":"necessary"}]},
+    {"id":"G-partial","packages":[],"criteria":["native"],"steps":[
+      {"operation":"install","requirement":"native","component":"compiler","fault":"partial","expected":"AUTHORIZED","necessity":"necessary"},
+      {"operation":"install","requirement":"native","component":"compiler","expected":"AUTHORIZED","necessity":"necessary"},
+      {"operation":"build","requirement":"native","expected":"AUTHORIZED","necessity":"necessary"}]},
+    {"id":"G-recovery-failure","packages":[],"criteria":["native"],"steps":[
+      {"operation":"install","requirement":"native","component":"compiler","fault":"recovery-fails","expected":"AUTHORIZED","necessity":"necessary"},
+      {"operation":"build","requirement":"native","expected":"REJECTED_INFEASIBLE","necessity":"necessary"}]},
+    {"id":"G-probe-failure","packages":[],"criteria":["native"],"steps":[
+      {"operation":"install","requirement":"native","component":"compiler","fault":"probe","expected":"AUTHORIZED","necessity":"necessary"},
+      {"operation":"install","requirement":"native","component":"compiler","expected":"AUTHORIZED","necessity":"necessary"},
+      {"operation":"build","requirement":"native","expected":"AUTHORIZED","necessity":"necessary"}]}
+  ]
+}

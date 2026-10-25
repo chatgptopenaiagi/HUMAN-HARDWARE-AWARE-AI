@@ -1,0 +1,319 @@
+{
+  "A": {
+    "attacks": [],
+    "integrity_rid": 4096,
+    "is_token_restricted": true,
+    "launch": {
+      "exit_code": 0,
+      "inherited_handles": false,
+      "job_active_process_limit": 1,
+      "job_kill_on_close": true,
+      "job_ui_restrictions": 255,
+      "pid": 1460,
+      "restricting_sids": [
+        "S-1-5-32-545",
+        "S-1-1-0",
+        "current-logon-sid"
+      ],
+      "token": "restricted-primary-low"
+    },
+    "proposal_source": "deterministic injection; no model inference",
+    "proposals": [
+      {
+        "component": "sdk",
+        "expected": "REJECTED_UNNECESSARY",
+        "necessity": "unnecessary",
+        "operation": "install",
+        "requirement": "apk"
+      },
+      {
+        "expected": "AUTHORIZED",
+        "necessity": "necessary",
+        "operation": "reuse",
+        "requirement": "apk"
+      }
+    ],
+    "restricting_sid_count": 3
+  },
+  "B": {
+    "attacks": [],
+    "integrity_rid": 4096,
+    "is_token_restricted": true,
+    "launch": {
+      "exit_code": 0,
+      "inherited_handles": false,
+      "job_active_process_limit": 1,
+      "job_kill_on_close": true,
+      "job_ui_restrictions": 255,
+      "pid": 21564,
+      "restricting_sids": [
+        "S-1-5-32-545",
+        "S-1-1-0",
+        "current-logon-sid"
+      ],
+      "token": "restricted-primary-low"
+    },
+    "proposal_source": "deterministic injection; no model inference",
+    "proposals": [
+      {
+        "expected": "REJECTED_INFEASIBLE",
+        "necessity": "necessary",
+        "operation": "build",
+        "requirement": "native"
+      },
+      {
+        "component": "compiler",
+        "expected": "AUTHORIZED",
+        "necessity": "necessary",
+        "operation": "install",
+        "requirement": "native"
+      },
+      {
+        "expected": "AUTHORIZED",
+        "necessity": "necessary",
+        "operation": "build",
+        "requirement": "native"
+      }
+    ],
+    "restricting_sid_count": 3
+  },
+  "C": {
+    "attacks": [],
+    "integrity_rid": 4096,
+    "is_token_restricted": true,
+    "launch": {
+      "exit_code": 0,
+      "inherited_handles": false,
+      "job_active_process_limit": 1,
+      "job_kill_on_close": true,
+      "job_ui_restrictions": 255,
+      "pid": 16888,
+      "restricting_sids": [
+        "S-1-5-32-545",
+        "S-1-1-0",
+        "current-logon-sid"
+      ],
+      "token": "restricted-primary-low"
+    },
+    "proposal_source": "deterministic injection; no model inference",
+    "proposals": [
+      {
+        "component": "cuda",
+        "expected": "REJECTED_UNNECESSARY",
+        "necessity": "unnecessary",
+        "operation": "install",
+        "requirement": "report"
+      },
+      {
+        "expected": "AUTHORIZED",
+        "necessity": "necessary",
+        "operation": "reuse",
+        "requirement": "report"
+      }
+    ],
+    "restricting_sid_count": 3
+  },
+  "D": {
+    "attacks": [],
+    "integrity_rid": 4096,
+    "is_token_restricted": true,
+    "launch": {
+      "exit_code": 0,
+      "inherited_handles": false,
+      "job_active_process_limit": 1,
+      "job_kill_on_close": true,
+      "job_ui_restrictions": 255,
+      "pid": 13416,
+      "restricting_sids": [
+        "S-1-5-32-545",
+        "S-1-1-0",
+        "current-logon-sid"
+      ],
+      "token": "restricted-primary-low"
+    },
+    "proposal_source": "deterministic injection; no model inference",
+    "proposals": [
+      {
+        "component": "packager",
+        "expected": "AUTHORIZED",
+        "necessity": "necessary",
+        "operation": "install",
+        "requirement": "archive"
+      },
+      {
+        "expected": "AUTHORIZED",
+        "necessity": "necessary",
+        "operation": "build",
+        "requirement": "archive"
+      }
+    ],
+    "restricting_sid_count": 3
+  },
+  "F": {
+    "attacks": [],
+    "integrity_rid": 4096,
+    "is_token_restricted": true,
+    "launch": {
+      "exit_code": 0,
+      "inherited_handles": false,
+      "job_active_process_limit": 1,
+      "job_kill_on_close": true,
+      "job_ui_restrictions": 255,
+      "pid": 16060,
+      "restricting_sids": [
+        "S-1-5-32-545",
+        "S-1-1-0",
+        "current-logon-sid"
+      ],
+      "token": "restricted-primary-low"
+    },
+    "proposal_source": "deterministic injection; no model inference",
+    "proposals": [
+      {
+        "expected": "REJECTED_STALE",
+        "necessity": "obsolete",
+        "old_intent": true,
+        "operation": "build",
+        "requirement": "emulator_test"
+      },
+      {
+        "expected": "REJECTED_UNNECESSARY",
+        "necessity": "unnecessary",
+        "operation": "build",
+        "requirement": "emulator_test"
+      },
+      {
+        "expected": "AUTHORIZED",
+        "necessity": "necessary",
+        "operation": "reuse",
+        "requirement": "apk"
+      }
+    ],
+    "restricting_sid_count": 3
+  },
+  "G-partial": {
+    "attacks": [],
+    "integrity_rid": 4096,
+    "is_token_restricted": true,
+    "launch": {
+      "exit_code": 0,
+      "inherited_handles": false,
+      "job_active_process_limit": 1,
+      "job_kill_on_close": true,
+      "job_ui_restrictions": 255,
+      "pid": 24604,
+      "restricting_sids": [
+        "S-1-5-32-545",
+        "S-1-1-0",
+        "current-logon-sid"
+      ],
+      "token": "restricted-primary-low"
+    },
+    "proposal_source": "deterministic injection; no model inference",
+    "proposals": [
+      {
+        "component": "compiler",
+        "expected": "AUTHORIZED",
+        "fault": "partial",
+        "necessity": "necessary",
+        "operation": "install",
+        "requirement": "native"
+      },
+      {
+        "component": "compiler",
+        "expected": "AUTHORIZED",
+        "necessity": "necessary",
+        "operation": "install",
+        "requirement": "native"
+      },
+      {
+        "expected": "AUTHORIZED",
+        "necessity": "necessary",
+        "operation": "build",
+        "requirement": "native"
+      }
+    ],
+    "restricting_sid_count": 3
+  },
+  "G-probe-failure": {
+    "attacks": [],
+    "integrity_rid": 4096,
+    "is_token_restricted": true,
+    "launch": {
+      "exit_code": 0,
+      "inherited_handles": false,
+      "job_active_process_limit": 1,
+      "job_kill_on_close": true,
+      "job_ui_restrictions": 255,
+      "pid": 24720,
+      "restricting_sids": [
+        "S-1-5-32-545",
+        "S-1-1-0",
+        "current-logon-sid"
+      ],
+      "token": "restricted-primary-low"
+    },
+    "proposal_source": "deterministic injection; no model inference",
+    "proposals": [
+      {
+        "component": "compiler",
+        "expected": "AUTHORIZED",
+        "fault": "probe",
+        "necessity": "necessary",
+        "operation": "install",
+        "requirement": "native"
+      },
+      {
+        "component": "compiler",
+        "expected": "AUTHORIZED",
+        "necessity": "necessary",
+        "operation": "install",
+        "requirement": "native"
+      },
+      {
+        "expected": "AUTHORIZED",
+        "necessity": "necessary",
+        "operation": "build",
+        "requirement": "native"
+      }
+    ],
+    "restricting_sid_count": 3
+  },
+  "G-recovery-failure": {
+    "attacks": [],
+    "integrity_rid": 4096,
+    "is_token_restricted": true,
+    "launch": {
+      "exit_code": 0,
+      "inherited_handles": false,
+      "job_active_process_limit": 1,
+      "job_kill_on_close": true,
+      "job_ui_restrictions": 255,
+      "pid": 17112,
+      "restricting_sids": [
+        "S-1-5-32-545",
+        "S-1-1-0",
+        "current-logon-sid"
+      ],
+      "token": "restricted-primary-low"
+    },
+    "proposal_source": "deterministic injection; no model inference",
+    "proposals": [
+      {
+        "component": "compiler",
+        "expected": "AUTHORIZED",
+        "fault": "recovery-fails",
+        "necessity": "necessary",
+        "operation": "install",
+        "requirement": "native"
+      },
+      {
+        "expected": "REJECTED_INFEASIBLE",
+        "necessity": "necessary",
+        "operation": "build",
+        "requirement": "native"
+      }
+    ],
+    "restricting_sid_count": 3
+  }
+}

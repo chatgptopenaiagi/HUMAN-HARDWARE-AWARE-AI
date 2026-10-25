@@ -1,0 +1,163 @@
+{
+  "preflight_1": {
+    "integrity_rid": 4096,
+    "proposals": [],
+    "proposal_source": "deterministic injection; no model inference",
+    "attacks": [
+      {
+        "attempt": "truncate-write",
+        "outcome": "DENIED",
+        "winerror": null,
+        "errno": 13,
+        "message": "[Errno 13] Permission denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\isolation-preflight\\\\protected\\\\state.json'"
+      },
+      {
+        "attempt": "append",
+        "outcome": "DENIED",
+        "winerror": null,
+        "errno": 13,
+        "message": "[Errno 13] Permission denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\isolation-preflight\\\\protected\\\\state.json'"
+      },
+      {
+        "attempt": "delete",
+        "outcome": "DENIED",
+        "winerror": 5,
+        "errno": 13,
+        "message": "[WinError 5] Access is denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\isolation-preflight\\\\protected\\\\state.json'"
+      },
+      {
+        "attempt": "replace",
+        "outcome": "DENIED",
+        "winerror": 5,
+        "errno": 13,
+        "message": "[WinError 5] Access is denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\isolation-preflight\\\\outbox\\\\replacement.json' -> 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\isolation-preflight\\\\protected\\\\state.json'"
+      },
+      {
+        "attempt": "change-mode",
+        "outcome": "DENIED",
+        "winerror": 5,
+        "errno": 13,
+        "message": "[WinError 5] Access is denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\isolation-preflight\\\\protected\\\\state.json'"
+      },
+      {
+        "attempt": "rename-protected-directory",
+        "outcome": "DENIED",
+        "winerror": 5,
+        "errno": 13,
+        "message": "[WinError 5] Access is denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\isolation-preflight\\\\protected' -> 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\isolation-preflight\\\\protected-moved'"
+      },
+      {
+        "attempt": "broker-terminate-access",
+        "outcome": "BYPASS_SUCCEEDED"
+      },
+      {
+        "attempt": "broker-memory-write-access",
+        "outcome": "DENIED",
+        "winerror": 5
+      },
+      {
+        "attempt": "broker-handle-duplication",
+        "outcome": "DENIED",
+        "winerror": 5
+      }
+    ]
+  },
+  "preflight_2": {
+    "integrity_rid": 4096,
+    "proposals": [],
+    "proposal_source": "deterministic injection; no model inference",
+    "attacks": [
+      {
+        "attempt": "truncate-write",
+        "outcome": "DENIED",
+        "winerror": null,
+        "errno": 13,
+        "message": "[Errno 13] Permission denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-4c94fe016211436bb4dc8b550f7c2000\\\\E\\\\protected\\\\state.json'"
+      },
+      {
+        "attempt": "append",
+        "outcome": "DENIED",
+        "winerror": null,
+        "errno": 13,
+        "message": "[Errno 13] Permission denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-4c94fe016211436bb4dc8b550f7c2000\\\\E\\\\protected\\\\state.json'"
+      },
+      {
+        "attempt": "delete",
+        "outcome": "DENIED",
+        "winerror": 5,
+        "errno": 13,
+        "message": "[WinError 5] Access is denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-4c94fe016211436bb4dc8b550f7c2000\\\\E\\\\protected\\\\state.json'"
+      },
+      {
+        "attempt": "replace",
+        "outcome": "DENIED",
+        "winerror": 5,
+        "errno": 13,
+        "message": "[WinError 5] Access is denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-4c94fe016211436bb4dc8b550f7c2000\\\\E\\\\outbox\\\\replacement.json' -> 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-4c94fe016211436bb4dc8b550f7c2000\\\\E\\\\protected\\\\state.json'"
+      },
+      {
+        "attempt": "change-mode",
+        "outcome": "DENIED",
+        "winerror": 5,
+        "errno": 13,
+        "message": "[WinError 5] Access is denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-4c94fe016211436bb4dc8b550f7c2000\\\\E\\\\protected\\\\state.json'"
+      },
+      {
+        "attempt": "create-authoritative-sibling",
+        "outcome": "DENIED",
+        "winerror": null,
+        "errno": 13,
+        "message": "[Errno 13] Permission denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-4c94fe016211436bb4dc8b550f7c2000\\\\E\\\\protected\\\\state.new'"
+      },
+      {
+        "attempt": "rename-protected-directory",
+        "outcome": "DENIED",
+        "winerror": 5,
+        "errno": 13,
+        "message": "[WinError 5] Access is denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-4c94fe016211436bb4dc8b550f7c2000\\\\E\\\\protected' -> 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-4c94fe016211436bb4dc8b550f7c2000\\\\E\\\\protected-moved'"
+      },
+      {
+        "attempt": "broker-terminate-access",
+        "outcome": "DENIED",
+        "winerror": 5
+      },
+      {
+        "attempt": "broker-memory-write-access",
+        "outcome": "DENIED",
+        "winerror": 5
+      },
+      {
+        "attempt": "broker-handle-duplication",
+        "outcome": "DENIED",
+        "winerror": 5
+      },
+      {
+        "attempt": "broker-dacl-write",
+        "outcome": "DENIED",
+        "winerror": 5
+      },
+      {
+        "attempt": "broker-create-thread",
+        "outcome": "DENIED",
+        "winerror": 5
+      },
+      {
+        "attempt": "broker-primary-token-theft",
+        "outcome": "BYPASS_SUCCEEDED",
+        "winerror": 5
+      }
+    ]
+  },
+  "interpretation": "Two permitted handle-access weaknesses found during development; no destructive broker termination or token use performed. These were failed isolation preflights, not successful final bypasses.",
+  "resolution": "Deny broker real-handle queries as well as mutation rights, require three restricting SIDs and low integrity, prohibit descendants with a Windows Job Object.",
+  "runtime_failures": [
+    {
+      "adapter": "restricted PowerShell",
+      "result": "registry policy read denied; exit 3762504530; no registry permissions changed"
+    },
+    {
+      "adapter": "reused Python first staging",
+      "result": "missing existing ffi.dll and zlib.dll dependencies; resolved by reusing those installed files locally"
+    }
+  ]
+}

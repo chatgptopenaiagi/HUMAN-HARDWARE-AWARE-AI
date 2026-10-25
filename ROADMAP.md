@@ -9,3 +9,6 @@ Progression gates are explicit: agreed scope and privacy boundaries; reproducibl
 
 ## Deferred decisions
 Storage technology, model provider, runtime, agent framework and scheduler remain open. Choosing them now would confuse theoretical requirements with implementation commitments.
+
+## GENESIS-1.1
+The separately authorized milestone implements a small standard-library simulator and a restricted Windows proposer. [Results](genesis-1.1/RESULTS.md) distinguish mechanical validation, developmental failures and untested model behavior. This does not authorize GENESIS-2, production orchestration or real-system modifications.

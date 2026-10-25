@@ -7,7 +7,7 @@ Artificial intelligence must adapt its engineering strategy to the human's actua
 This repository proposes human-hardware capability alignment: preserve the human objective, verify available resources and combined capabilities, and select a feasible strategy with observable completion conditions. The objective is verified human achievement, not maximum autonomous activity.
 
 ## Research status
-This is a conceptual research foundation, not a production orchestration engine. Proposed mechanisms and anticipated benefits are untested unless explicitly identified otherwise. No performance, energy, economic benefit or scientific novelty is claimed.
+GENESIS-1 established a conceptual research foundation. [GENESIS-1.1](genesis-1.1/README.md) adds an experimental Awareness Kernel with deterministic simulated transitions and Windows-enforced proposer restrictions. It is not a production orchestration engine. Proposed benefits remain untested unless explicitly identified otherwise. No performance, energy, economic benefit or scientific novelty is claimed.
 
 ## Reading path
 Start with [VISION](VISION.md), [ARCHITECTURE](ARCHITECTURE.md) and [RESEARCH-QUESTIONS](RESEARCH-QUESTIONS.md). The theory directory develops the principles; architecture describes proposed mechanisms; research defines hypotheses, related work and evaluation; scenarios explore different resource contexts. [ROADMAP](ROADMAP.md) separates this foundation from future work. [Experiments](experiments/README.md) contains the protocol for future evidence.

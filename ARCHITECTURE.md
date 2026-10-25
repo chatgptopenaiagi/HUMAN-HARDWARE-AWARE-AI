@@ -11,3 +11,6 @@ The [cycle specification](theory/autonomous-engineering-cycle.md) defines stage 
 
 ## Boundaries
 Use one logical coordinator even if future workers run in parallel. Separate proposed predictions from observed state. Limit discovery to relevant, authorized probes. Never infer runtime interoperability from installation lists. No component is implemented in GENESIS-1.
+
+## GENESIS-1.1 implementation boundary
+The [Awareness Kernel](genesis-1.1/README.md) implements the evidence, intent, graph, validation and recovery concepts against a fixed simulator. A restricted Windows process proposes actions; a trusted broker governs protected experimental state. Read the [security boundary](genesis-1.1/SECURITY-BOUNDARY.md) before interpreting enforcement results. No real-system mutation adapter exists.

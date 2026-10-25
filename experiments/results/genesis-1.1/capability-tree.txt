@@ -1,0 +1,14 @@
+apk (alternatives)
+  cap:apk
+    java
+    sdk
+    builder
+    storage
+
+native (alternatives)
+  cap:native
+    compiler
+    storage
+  cap:native-portable
+    portable_compiler
+    storage [shared reference]

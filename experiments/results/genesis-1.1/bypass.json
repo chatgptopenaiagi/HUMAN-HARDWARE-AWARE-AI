@@ -1,0 +1,110 @@
+{
+  "attacks": [
+    {
+      "attempt": "truncate-write",
+      "errno": 13,
+      "message": "[Errno 13] Permission denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-47daf72f8d294bd6a8e82478ef814d9e\\\\E\\\\protected\\\\state.json'",
+      "outcome": "DENIED",
+      "winerror": null
+    },
+    {
+      "attempt": "append",
+      "errno": 13,
+      "message": "[Errno 13] Permission denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-47daf72f8d294bd6a8e82478ef814d9e\\\\E\\\\protected\\\\state.json'",
+      "outcome": "DENIED",
+      "winerror": null
+    },
+    {
+      "attempt": "delete",
+      "errno": 13,
+      "message": "[WinError 5] Access is denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-47daf72f8d294bd6a8e82478ef814d9e\\\\E\\\\protected\\\\state.json'",
+      "outcome": "DENIED",
+      "winerror": 5
+    },
+    {
+      "attempt": "replace",
+      "errno": 13,
+      "message": "[WinError 5] Access is denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-47daf72f8d294bd6a8e82478ef814d9e\\\\E\\\\outbox\\\\replacement.json' -> 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-47daf72f8d294bd6a8e82478ef814d9e\\\\E\\\\protected\\\\state.json'",
+      "outcome": "DENIED",
+      "winerror": 5
+    },
+    {
+      "attempt": "change-mode",
+      "errno": 13,
+      "message": "[WinError 5] Access is denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-47daf72f8d294bd6a8e82478ef814d9e\\\\E\\\\protected\\\\state.json'",
+      "outcome": "DENIED",
+      "winerror": 5
+    },
+    {
+      "attempt": "create-authoritative-sibling",
+      "errno": 13,
+      "message": "[Errno 13] Permission denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-47daf72f8d294bd6a8e82478ef814d9e\\\\E\\\\protected\\\\state.new'",
+      "outcome": "DENIED",
+      "winerror": null
+    },
+    {
+      "attempt": "rename-protected-directory",
+      "errno": 13,
+      "message": "[WinError 5] Access is denied: 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-47daf72f8d294bd6a8e82478ef814d9e\\\\E\\\\protected' -> 'E:\\\\HUMAN-HARDWARE-AWARE-AI\\\\experiments\\\\.runtime\\\\run-47daf72f8d294bd6a8e82478ef814d9e\\\\E\\\\protected-moved'",
+      "outcome": "DENIED",
+      "winerror": 5
+    },
+    {
+      "attempt": "broker-terminate-access",
+      "outcome": "DENIED",
+      "winerror": 5
+    },
+    {
+      "attempt": "broker-memory-write-access",
+      "outcome": "DENIED",
+      "winerror": 5
+    },
+    {
+      "attempt": "broker-handle-duplication",
+      "outcome": "DENIED",
+      "winerror": 5
+    },
+    {
+      "attempt": "broker-dacl-write",
+      "outcome": "DENIED",
+      "winerror": 5
+    },
+    {
+      "attempt": "broker-create-thread",
+      "outcome": "DENIED",
+      "winerror": 5
+    },
+    {
+      "attempt": "broker-primary-token-theft",
+      "outcome": "DENIED",
+      "winerror": 5
+    },
+    {
+      "attempt": "descendant-process-creation",
+      "errno": 12,
+      "message": "[WinError 1816] Not enough quota is available to process this command",
+      "outcome": "DENIED",
+      "winerror": 1816
+    }
+  ],
+  "integrity_rid": 4096,
+  "is_token_restricted": true,
+  "launch": {
+    "exit_code": 0,
+    "inherited_handles": false,
+    "job_active_process_limit": 1,
+    "job_kill_on_close": true,
+    "job_ui_restrictions": 255,
+    "pid": 20168,
+    "restricting_sids": [
+      "S-1-5-32-545",
+      "S-1-1-0",
+      "current-logon-sid"
+    ],
+    "token": "restricted-primary-low"
+  },
+  "proposal_source": "deterministic injection; no model inference",
+  "proposals": [],
+  "restricting_sid_count": 3,
+  "state_unchanged": true
+}

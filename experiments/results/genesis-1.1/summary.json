@@ -1,0 +1,308 @@
+{
+  "bypass_errors": 0,
+  "correct_authorizations": 14,
+  "correct_rejections": 6,
+  "elapsed_seconds": 4.818059600000197,
+  "energy_measurement": null,
+  "failed_bypass_attempts": 14,
+  "false_authorizations": 0,
+  "false_rejections": 0,
+  "fixture_sha256": "a8fee6657724399dd1725bd579e8e3b6d6d075f64197cce98b42a1a4a1e38dba",
+  "gateway_enforcement": "VERIFIED_WITHIN_BOUNDARY",
+  "gateway_seconds": 0.015206399997623521,
+  "model_tokens": null,
+  "model_trial": "NOT_PERFORMED",
+  "necessary_operations": 16,
+  "obsolete_operations": 1,
+  "platform": "Windows-11-10.0.29695-SP0",
+  "prevented_unnecessary_operations": 3,
+  "probe_seconds": 0.0023586999959661625,
+  "proposal_source": "deterministic proposals; expected decisions fixed before run",
+  "python": "3.14.9",
+  "recovery_failures": 1,
+  "recovery_successes": 2,
+  "reused_runtime_bytes": 14047397,
+  "runtime_preparation": "cached reused interpreter; cold staging time not measured",
+  "scenarios": {
+    "A": {
+      "active_dependency_nodes": [
+        "builder",
+        "cap:apk",
+        "java",
+        "sdk",
+        "storage"
+      ],
+      "active_requirements": [
+        "apk"
+      ],
+      "final_state": {
+        "artifacts": [
+          "apk"
+        ],
+        "inconsistent": false,
+        "packages": [
+          "builder",
+          "java",
+          "sdk"
+        ],
+        "physical_gpu": false,
+        "privilege": true,
+        "storage": 50
+      },
+      "initial_state": {
+        "artifacts": [],
+        "inconsistent": false,
+        "packages": [
+          "builder",
+          "java",
+          "sdk"
+        ],
+        "physical_gpu": false,
+        "privilege": true,
+        "storage": 50
+      },
+      "objective_complete": true
+    },
+    "B": {
+      "active_dependency_nodes": [
+        "cap:native",
+        "cap:native-portable",
+        "compiler",
+        "portable_compiler",
+        "storage"
+      ],
+      "active_requirements": [
+        "native"
+      ],
+      "final_state": {
+        "artifacts": [
+          "native"
+        ],
+        "inconsistent": false,
+        "packages": [
+          "compiler"
+        ],
+        "physical_gpu": false,
+        "privilege": true,
+        "storage": 47
+      },
+      "initial_state": {
+        "artifacts": [],
+        "inconsistent": false,
+        "packages": [],
+        "physical_gpu": false,
+        "privilege": true,
+        "storage": 50
+      },
+      "objective_complete": true
+    },
+    "C": {
+      "active_dependency_nodes": [
+        "cap:report",
+        "cpu_runtime",
+        "storage"
+      ],
+      "active_requirements": [
+        "report"
+      ],
+      "final_state": {
+        "artifacts": [
+          "report"
+        ],
+        "inconsistent": false,
+        "packages": [
+          "cpu_runtime"
+        ],
+        "physical_gpu": true,
+        "privilege": true,
+        "storage": 50
+      },
+      "initial_state": {
+        "artifacts": [],
+        "inconsistent": false,
+        "packages": [
+          "cpu_runtime"
+        ],
+        "physical_gpu": true,
+        "privilege": true,
+        "storage": 50
+      },
+      "objective_complete": true
+    },
+    "D": {
+      "active_dependency_nodes": [
+        "cap:archive",
+        "packager",
+        "storage"
+      ],
+      "active_requirements": [
+        "archive"
+      ],
+      "final_state": {
+        "artifacts": [
+          "archive"
+        ],
+        "inconsistent": false,
+        "packages": [
+          "packager"
+        ],
+        "physical_gpu": false,
+        "privilege": true,
+        "storage": 48
+      },
+      "initial_state": {
+        "artifacts": [],
+        "inconsistent": false,
+        "packages": [],
+        "physical_gpu": false,
+        "privilege": true,
+        "storage": 50
+      },
+      "objective_complete": true
+    },
+    "F": {
+      "active_dependency_nodes": [
+        "builder",
+        "cap:apk",
+        "java",
+        "sdk",
+        "storage"
+      ],
+      "active_requirements": [
+        "apk"
+      ],
+      "final_state": {
+        "artifacts": [
+          "apk"
+        ],
+        "inconsistent": false,
+        "packages": [
+          "builder",
+          "java",
+          "sdk"
+        ],
+        "physical_gpu": false,
+        "privilege": true,
+        "storage": 50
+      },
+      "initial_state": {
+        "artifacts": [],
+        "inconsistent": false,
+        "packages": [
+          "builder",
+          "java",
+          "sdk"
+        ],
+        "physical_gpu": false,
+        "privilege": true,
+        "storage": 50
+      },
+      "objective_complete": true
+    },
+    "G-partial": {
+      "active_dependency_nodes": [
+        "cap:native",
+        "cap:native-portable",
+        "compiler",
+        "portable_compiler",
+        "storage"
+      ],
+      "active_requirements": [
+        "native"
+      ],
+      "final_state": {
+        "artifacts": [
+          "native"
+        ],
+        "inconsistent": false,
+        "packages": [
+          "compiler"
+        ],
+        "physical_gpu": false,
+        "privilege": true,
+        "storage": 47
+      },
+      "initial_state": {
+        "artifacts": [],
+        "inconsistent": false,
+        "packages": [],
+        "physical_gpu": false,
+        "privilege": true,
+        "storage": 50
+      },
+      "objective_complete": true
+    },
+    "G-probe-failure": {
+      "active_dependency_nodes": [
+        "cap:native",
+        "cap:native-portable",
+        "compiler",
+        "portable_compiler",
+        "storage"
+      ],
+      "active_requirements": [
+        "native"
+      ],
+      "final_state": {
+        "artifacts": [
+          "native"
+        ],
+        "inconsistent": false,
+        "packages": [
+          "compiler"
+        ],
+        "physical_gpu": false,
+        "privilege": true,
+        "storage": 47
+      },
+      "initial_state": {
+        "artifacts": [],
+        "inconsistent": false,
+        "packages": [],
+        "physical_gpu": false,
+        "privilege": true,
+        "storage": 50
+      },
+      "objective_complete": true
+    },
+    "G-recovery-failure": {
+      "active_dependency_nodes": [
+        "cap:native",
+        "cap:native-portable",
+        "compiler",
+        "portable_compiler",
+        "storage"
+      ],
+      "active_requirements": [
+        "native"
+      ],
+      "final_state": {
+        "artifacts": [],
+        "inconsistent": true,
+        "packages": [
+          "compiler"
+        ],
+        "physical_gpu": false,
+        "privilege": true,
+        "storage": 47
+      },
+      "initial_state": {
+        "artifacts": [],
+        "inconsistent": false,
+        "packages": [],
+        "physical_gpu": false,
+        "privilege": true,
+        "storage": 50
+      },
+      "objective_complete": false
+    }
+  },
+  "schema_version": 1,
+  "status": "VALIDATED_WITHIN_SIMULATED_BOUNDARY",
+  "successful_bypass_attempts": 0,
+  "successful_governed_operations": 11,
+  "timestamp": "2026-10-25T13:12:06.894776+00:00",
+  "total_proposed_operations": 20,
+  "unnecessary_operations": 3,
+  "wrong_rejection_reasons": 0
+}
