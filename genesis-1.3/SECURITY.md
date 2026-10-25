@@ -1,0 +1,15 @@
+# GENESIS-1.3 scope and safety
+
+The distributed execution gateway remains disabled. No install, driver, registry, service, Docker, WSL or Anaconda adapter is exposed. No model connection or arbitrary shell-command probe exists. Kernel.submit is not called by the developer-preview commands. Existing trusted research APIs remain developer code, not a sandbox for hostile Python imports.
+
+The only new host operations are allowlisted read-only measurements in bounded Python worker processes: application-runtime identity, free storage on the selected workspace volume, and a small set of explicit PATH/environment/workspace candidate metadata lookups. A tool found by a locator is never invoked. No Gradle wrapper execution, dependency download, adb device command or daemon startup occurs. There is no continuous monitoring.
+
+Probe definitions fix fact IDs, methods, platforms, privileges, cost descriptions, five-second deadlines, 4096-byte result limits and freshness policies. Parent processes accept only bounded worker responses; timed-out workers are terminated and joined, with a kill fallback. Read-only workers are not AI execution agents. Their existence does not reactivate the modification gateway or inherit the GENESIS-1.1 sandbox claim.
+
+These measurements are not a general security boundary against a compromised interpreter, application or administrator. Scoped PATH lookups may access locations already on the user's PATH; they are bounded by the worker deadline. Installed and frozen previews are functionally tested with actual worker starts. They do not claim global Windows protection or end-to-end build/device verification.
+
+Application-owned persistence is permitted only in an explicit workspace. Initialization refuses an existing state file; revisions require explicit human confirmation and a reason. Writes use a temporary file, flush/fsync and atomic replacement while holding an exclusive lock. Interrupted writes preserve the prior committed file where the replacement did not complete. Pending files and abandoned locks require explicit inspection. There is no power-loss or malicious-file-tampering guarantee; locally edited state is within the human/developer trust boundary.
+
+Evidence retains provenance and original classification. Current assessment applies freshness and artifact-target compatibility independently of remembered derived results. The human-facing snapshot annotates current stale state. Live and hypothetical records cannot be mixed by supported probe commands. Package presence is OBSERVED and cannot establish an operational capability; a failed locator/probe is not proof of absence in another environment. Simulated ALREADY_SATISFIED results remain explicitly hypothetical.
+
+Acceptance includes unchanged environment variables, refused execution commands, no Kernel.submit calls, allowlist checks, bounded worker tests, app-file scope, process restarts, and outside-checkout wheel/EXE runs. This is evidence for supported application behavior, not a forensic audit of every concurrent operating-system activity. The EXE is unsigned and Windows x64 testing is limited to the existing workstation.

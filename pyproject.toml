@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "human-hardware-awareness-kernel"
-version = "0.1.2.dev1"
+version = "0.1.3.dev1"
 description = "Experimental developer preview of an evidence-backed Awareness Kernel"
-readme = "genesis-1.2/README.md"
+readme = "genesis-1.3/README.md"
 requires-python = ">=3.10"
 authors = [{name = "HUMAN-HARDWARE-AWARE-AI contributors"}]
 classifiers = [

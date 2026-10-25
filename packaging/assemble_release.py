@@ -3,6 +3,7 @@ import ast
 import hashlib
 import json
 import os
+import runpy
 from pathlib import Path
 import subprocess
 import sys
@@ -11,8 +12,9 @@ from tempfile import TemporaryDirectory
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-DIST = ROOT / 'dist'
-VERSION = '0.1.2.dev1'
+VERSION = runpy.run_path(str(ROOT / 'awareness_kernel/__init__.py'))['__version__']
+DIST = ROOT / 'dist' / VERSION
+MILESTONE = 'genesis-1.3'
 
 
 def digest(data):
@@ -23,7 +25,7 @@ def assemble():
     wheel = DIST / f'human_hardware_awareness_kernel-{VERSION}-py3-none-any.whl'
     sdist = DIST / f'human_hardware_awareness_kernel-{VERSION}.tar.gz'
     exe = DIST / 'AwarenessKernel.exe'
-    acceptance = json.loads((ROOT / 'genesis-1.2/evidence/artifact-acceptance.json').read_text())
+    acceptance = json.loads((ROOT / MILESTONE / 'evidence/artifact-acceptance.json').read_text())
     assert acceptance['passed']
     with zipfile.ZipFile(wheel) as archive:
         assert archive.testzip() is None
@@ -39,7 +41,7 @@ def assemble():
         assert all(not m.issym() and not m.islnk() and not m.name.startswith('/')
                    and '..' not in Path(m.name).parts for m in archive.getmembers())
         assert not any(any(part in name for part in ('.preview-work/', '.runtime/', '__pycache__/')) for name in source_names)
-    analysis = ast.literal_eval((ROOT / '.preview-work/pyinstaller/AwarenessKernel/Analysis-00.toc').read_text())
+    analysis = ast.literal_eval((ROOT / f'.preview-work/pyinstaller-{VERSION}/AwarenessKernel/Analysis-00.toc').read_text())
     binary_names = sorted({entry[0] for part in analysis if isinstance(part, list)
                            for entry in part if isinstance(entry, tuple) and len(entry) > 2
                            and entry[-1] in {'BINARY', 'EXTENSION'}})
@@ -60,7 +62,7 @@ def assemble():
     with zipfile.ZipFile(bundle, 'w', zipfile.ZIP_DEFLATED) as archive:
         archive.write(exe, 'AwarenessKernel.exe')
         for filename in ('README.md', 'SECURITY.md', 'BUILD-REPORT.md'):
-            archive.write(ROOT / 'genesis-1.2' / filename, filename)
+            archive.write(ROOT / MILESTONE / filename, filename)
         for name, content in notices.items():
             archive.writestr(name, content)
     with TemporaryDirectory(prefix='awareness-extract-') as directory, zipfile.ZipFile(bundle) as archive:
@@ -80,11 +82,11 @@ def assemble():
         inventory['files'][artifact.name] = {'bytes': artifact.stat().st_size, 'sha256': digest(artifact.read_bytes())}
     checksums = ''.join(f'{item["sha256"]}  {name}\n' for name, item in inventory['files'].items())
     (DIST / 'SHA256SUMS.txt').write_text(checksums, encoding='utf-8')
-    (ROOT / 'genesis-1.2/SHA256SUMS.txt').write_text(checksums, encoding='utf-8')
-    (ROOT / 'genesis-1.2/evidence/artifact-inventory.json').write_text(json.dumps(inventory, indent=2) + '\n', encoding='utf-8')
+    (ROOT / MILESTONE / 'SHA256SUMS.txt').write_text(checksums, encoding='utf-8')
+    (ROOT / MILESTONE / 'evidence/artifact-inventory.json').write_text(json.dumps(inventory, indent=2) + '\n', encoding='utf-8')
     sources = [ROOT / 'pyproject.toml', ROOT / 'MANIFEST.in', *sorted((ROOT / 'awareness_kernel').glob('*.py')),
-               *sorted((ROOT / 'packaging').glob('*')), ROOT / 'tests/test_preview.py']
-    (ROOT / 'genesis-1.2/evidence/source-manifest.json').write_text(json.dumps({
+               *sorted((ROOT / 'packaging').glob('*')), *sorted((ROOT / 'tests').glob('*.py'))]
+    (ROOT / MILESTONE / 'evidence/source-manifest.json').write_text(json.dumps({
         p.relative_to(ROOT).as_posix(): digest(p.read_bytes().replace(b'\r\n', b'\n'))
         for p in sources if p.is_file()}, indent=2) + '\n', encoding='utf-8')
     print(checksums)

@@ -1,6 +1,9 @@
 include genesis-1.2/README.md
 include genesis-1.2/SECURITY.md
 include genesis-1.2/BUILD-REPORT.md
+include genesis-1.3/README.md
+include genesis-1.3/SECURITY.md
+include genesis-1.3/BUILD-REPORT.md
 recursive-include packaging *.py *.ps1
 recursive-include tests *.py
 include experiments/run_genesis_1_1.py

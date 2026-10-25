@@ -1,4 +1,10 @@
 # Changelog
+## GENESIS-1.3 — 2026-10-25
+- Added ALREADY_SATISFIED with compatible fresh operational evidence and resource constraints.
+- Added goal-conditioned probe plans, bounded read-only workers, evidence reuse and unsupported-adapter explanations.
+- Added explicit-workspace persistence, human-confirmed Intent revisions, plan invalidation and graph deltas.
+- Preserved prior algorithms, evidence and distributions; real-system mutation remains disabled.
+
 ## GENESIS-1.2 — 2026-10-25
 - Added Python packaging metadata, versioned CLI, wheel and source distribution.
 - Added a Windows console build using one isolated PyInstaller environment.

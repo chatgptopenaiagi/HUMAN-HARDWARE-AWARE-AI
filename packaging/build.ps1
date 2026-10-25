@@ -5,14 +5,16 @@ $previousCache = $env:PYINSTALLER_CONFIG_DIR
 $env:PYINSTALLER_CONFIG_DIR = Join-Path $repoRoot '.preview-work/pyinstaller-cache'
 Push-Location -LiteralPath $repoRoot
 try {
-    python -m build --no-isolation
+    $previewVersion = python -c 'from awareness_kernel import __version__; print(__version__)'
+    $artifactDirectory = Join-Path $repoRoot "dist/$previewVersion"
+    python -m build --no-isolation --outdir $artifactDirectory
     if ($LASTEXITCODE) { throw 'Python distribution build failed' }
     $isolatedPython = Join-Path $repoRoot '.preview-work/venv/Scripts/python.exe'
     if (-not (Test-Path -LiteralPath $isolatedPython)) {
         python -m venv .preview-work/venv
         if ($LASTEXITCODE) { throw 'Isolated environment creation failed' }
     }
-    $wheelPath = Join-Path $repoRoot 'dist/human_hardware_awareness_kernel-0.1.2.dev1-py3-none-any.whl'
+    $wheelPath = Join-Path $artifactDirectory "human_hardware_awareness_kernel-$previewVersion-py3-none-any.whl"
     & $isolatedPython -m pip install --no-index --no-deps --force-reinstall $wheelPath
     if ($LASTEXITCODE) { throw 'Wheel installation failed' }
     if (-not $SkipExecutable) {
@@ -25,11 +27,11 @@ try {
         $excludedModules = @('ssl', '_ssl', '_hashlib', 'decimal', '_decimal', 'lzma', '_lzma', 'bz2', '_bz2', 'compression.zstd', '_zstd', 'ctypes', '_ctypes')
         $excludeArguments = @()
         foreach ($moduleName in $excludedModules) { $excludeArguments += @('--exclude-module', $moduleName) }
-        & $isolatedPython -m PyInstaller --onefile --console --clean --noconfirm --name AwarenessKernel --paths $repoRoot --workpath .preview-work/pyinstaller --specpath .preview-work --distpath dist @excludeArguments packaging/preview_entry.py
+        & $isolatedPython -m PyInstaller --onefile --console --clean --noconfirm --name AwarenessKernel --paths $repoRoot --workpath ".preview-work/pyinstaller-$previewVersion" --specpath .preview-work --distpath $artifactDirectory @excludeArguments packaging/preview_entry.py
         if ($LASTEXITCODE) { throw 'EXE build failed' }
-        python packaging/verify_artifacts.py --python $isolatedPython --exe dist/AwarenessKernel.exe --results genesis-1.2/evidence/artifact-acceptance.json
+        python packaging/verify_genesis_1_3.py --python $isolatedPython --exe "$artifactDirectory/AwarenessKernel.exe" --results genesis-1.3/evidence/artifact-acceptance.json
     } else {
-        python packaging/verify_artifacts.py --python $isolatedPython --results genesis-1.2/evidence/artifact-acceptance.json
+        python packaging/verify_genesis_1_3.py --python $isolatedPython --results genesis-1.3/evidence/artifact-acceptance.json
     }
     if ($LASTEXITCODE) { throw 'Artifact acceptance failed' }
 } finally {

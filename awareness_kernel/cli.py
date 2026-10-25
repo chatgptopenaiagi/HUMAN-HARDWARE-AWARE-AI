@@ -87,7 +87,15 @@ def nonnegative(value):
 
 
 def main(argv=None):
+    import multiprocessing
+    import sys
+    multiprocessing.freeze_support()
+    from .interface import COMMANDS, workspace_main
+    argv = sys.argv[1:] if argv is None else argv
+    if argv and argv[0] in COMMANDS:
+        return workspace_main(argv)
     parser = argparse.ArgumentParser(description=LABEL + ': inspect and evaluate simulated capabilities; execution disabled.')
+    parser.epilog = 'Persistent goal commands: ' + ', '.join(sorted(COMMANDS)) + '. Each requires --workspace; add --json for full evidence.'
     parser.add_argument('--version', action='version', version=f'{LABEL} {__version__}')
     sub = parser.add_subparsers(dest='command', required=True)
     sub.add_parser('selftest', help='check seven evaluation cases; no actions executed')
